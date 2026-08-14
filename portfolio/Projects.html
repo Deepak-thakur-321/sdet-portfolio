@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Work — Deepak</title>
+<meta name="description" content="Development and QA/testing projects by Deepak — VELOR, TechStock Pro, and manual QA work." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { bg:'#0a0a0a', accent:'#f5a623' },
+    fontFamily: { display:['"Space Grotesk"','sans-serif'], body:['"Inter"','sans-serif'], mono:['"JetBrains Mono"','monospace'] }
+  } } }
+</script>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+</head>
+<body class="font-body">
+
+<div class="grain"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div id="transition-overlay"><span class="t-label">deepak.dev</span></div>
+
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">DEEPAK<span class="dot">.</span><span style="color:var(--fg-faint)">&lt;qa/&gt;</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="projects.html" class="nav-link">Work</a>
+    <a href="resume.html" class="nav-link">Resume</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </div>
+  <div class="status-pill"><span class="ping"></span>Open to QA / SDET roles</div>
+  <div class="nav-burger"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-nav">
+  <a href="index.html"><span>01</span>Home</a>
+  <a href="about.html"><span>02</span>About</a>
+  <a href="projects.html"><span>03</span>Work</a>
+  <a href="resume.html"><span>04</span>Resume</a>
+  <a href="contact.html"><span>05</span>Contact</a>
+</div>
+
+<header class="container pt-40 pb-14">
+  <p class="eyebrow reveal">Work</p>
+  <h1 class="font-display font-extrabold mt-4 leading-[0.98] reveal" style="font-size:clamp(2.4rem,7vw,5rem); max-width:16ch">
+    Two ways to look at the same code.
+  </h1>
+  <p class="mt-6 max-w-xl reveal" style="color:var(--fg-dim); font-size:1.08rem; line-height:1.7">
+    Every project below has a build side and a break side. Some projects appear
+    in both — built by me, then tested by me, on purpose.
+  </p>
+</header>
+
+<!-- DEV PROJECTS -->
+<section class="container py-14 md:py-20">
+  <div class="flex items-center gap-4 reveal">
+    <span class="eyebrow">01</span>
+    <h2 class="font-display font-bold" style="font-size:clamp(1.6rem,3.5vw,2.2rem)">Development Projects</h2>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-6 mt-10">
+    <article class="assert reveal p-0 overflow-hidden" style="padding:0;">
+      <div class="p-6 md:p-7">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="font-display font-bold text-2xl">VELOR</h3>
+          <span class="proj-tag">Role: Sole developer</span>
+        </div>
+        <p class="mt-3 text-sm" style="color:var(--fg-dim); line-height:1.65">
+          A React-based fashion e-commerce app — Redux Toolkit for state, React Router
+          for navigation, custom AuthContext and WishlistContext, and a premium UI/UX
+          pass across Navbar, Footer, Profile, Login, Register and Gallery.
+        </p>
+        <div class="proj-tags mt-4">
+          <span class="proj-tag">React</span><span class="proj-tag">Redux Toolkit</span>
+          <span class="proj-tag">React Router</span><span class="proj-tag">Tailwind CSS</span>
+        </div>
+        <div class="flex gap-5 mt-6">
+          <a href="https://fashion-commerce-nine.vercel.app/" target="_blank" rel="noopener" class="btn btn-outline magnetic">Live demo <span class="btn-arrow">→</span></a>
+          <a href="https://github.com/Deepak-thakur-321" target="_blank" rel="noopener" class="btn btn-outline magnetic">GitHub <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="assert reveal p-0 overflow-hidden" style="padding:0;">
+      <div class="p-6 md:p-7">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="font-display font-bold text-2xl">TechStock Pro</h3>
+          <span class="proj-tag">Role: Sole developer</span>
+        </div>
+        <p class="mt-3 text-sm" style="color:var(--fg-dim); line-height:1.65">
+          A multi-page static electronics inventory management dashboard, built with
+          HTML, Tailwind CSS and vanilla JavaScript, with a shared data layer shaped
+          to resemble a future REST API response.
+        </p>
+        <div class="proj-tags mt-4">
+          <span class="proj-tag">HTML5</span><span class="proj-tag">Tailwind CSS</span>
+          <span class="proj-tag">Vanilla JS</span><span class="proj-tag">data-testid</span>
+        </div>
+        <div class="flex gap-5 mt-6">
+          <a href="https://github.com/Deepak-thakur-321" target="_blank" rel="noopener" class="btn btn-outline magnetic">GitHub <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- QA PROJECTS -->
+<section class="container py-14 md:py-24 border-t" style="border-color:var(--line)">
+  <div class="flex items-center gap-4 reveal">
+    <span class="eyebrow">02</span>
+    <h2 class="font-display font-bold" style="font-size:clamp(1.6rem,3.5vw,2.2rem)">QA / Testing Projects</h2>
+  </div>
+
+  <div class="mt-10">
+    <div class="proj-row reveal">
+      <span class="proj-index">01</span>
+      <span class="proj-title">VELOR — QA suite</span>
+      <span class="proj-tags">
+        <span class="proj-tag">Manual test cases (Excel)</span>
+        <span class="proj-tag">20+ Playwright E2E tests</span>
+        <span class="proj-tag">Page Object Model</span>
+        <span class="proj-tag">GitHub Actions CI</span>
+      </span>
+      <a href="https://github.com/Deepak-thakur-321" target="_blank" rel="noopener" class="proj-arrow">↗</a>
+    </div>
+    <div class="proj-row reveal">
+      <span class="proj-index">02</span>
+      <span class="proj-title">TechStock Pro — QA target</span>
+      <span class="proj-tags">
+        <span class="proj-tag">data-testid coverage</span>
+        <span class="proj-tag">Built for Playwright automation</span>
+      </span>
+      <a href="https://github.com/Deepak-thakur-321" target="_blank" rel="noopener" class="proj-arrow">↗</a>
+    </div>
+    <div class="proj-row reveal">
+      <span class="proj-index">03</span>
+      <span class="proj-title">AYUVYA — manual QA assignment</span>
+      <span class="proj-tags">
+        <span class="proj-tag">Test case design</span>
+        <span class="proj-tag">Bug report</span>
+        <span class="proj-tag">Ayurvedic diet/health coaching app</span>
+      </span>
+      <a href="mailto:deepakthakur.codr@gmail.com" class="proj-arrow">↗</a>
+    </div>
+    <div class="proj-row reveal">
+      <span class="proj-index">04</span>
+      <span class="proj-title">Manual test case documentation</span>
+      <span class="proj-tags">
+        <span class="proj-tag">Excel</span>
+        <span class="proj-tag">Test case design process</span>
+      </span>
+      <a href="mailto:deepakthakur.codr@gmail.com" class="proj-arrow">↗</a>
+    </div>
+  </div>
+  <p class="mt-6 text-sm reveal" style="color:var(--fg-faint)">
+    Sample test case sheets and bug reports available on request — <a href="contact.html" style="color:var(--accent); border-bottom:1px solid var(--accent)">reach out</a>.
+  </p>
+</section>
+
+<footer class="site-footer">
+  <div class="container flex flex-col md:flex-row md:items-center justify-between gap-6">
+    <div>
+      <p class="font-display font-bold text-xl">Deepak</p>
+      <p style="color:var(--fg-faint)" class="text-sm mt-1">New Delhi, India — open to QA Engineer / SDET roles</p>
+    </div>
+    <div class="footer-links flex flex-wrap gap-x-6 gap-y-2">
+      <a href="https://www.linkedin.com/in/deepakthakur22" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Deepak-thakur-321" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:deepakthakur.codr@gmail.com">Email</a>
+      <a href="resume.html">Resume</a>
+    </div>
+  </div>
+  <div class="container mt-10 pt-6" style="border-top:1px solid var(--line-soft); color:var(--fg-faint); font-family:var(--mono); font-size:.72rem;">
+    © 2026 Deepak. Built by hand, tested on purpose.
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+/* ==========================================================================
+   Deepak — Portfolio
+   Design system: near-black editorial base, single "signal amber" accent,
+   monospace test-assertion motif tying the Dev + QA dual identity together.
+   ========================================================================== */
+
+:root{
+  --bg:        #0a0a0a;
+  --bg-alt:    #111214;
+  --bg-panel:  #16171a;
+  --fg:        #f4f3ef;
+  --fg-dim:    #9c9c96;
+  --fg-faint:  #5c5c58;
+  --line:      #232325;
+  --line-soft: #1a1a1c;
+  --accent:    #f5a623;
+  --accent-dim:#3a2a0f;
+  --pass:      #34d399;
+  --fail:      #f2545b;
+
+  --display: "Space Grotesk", "Arial Narrow", sans-serif;
+  --body:    "Inter", -apple-system, sans-serif;
+  --mono:    "JetBrains Mono", ui-monospace, monospace;
+}
+
+*{ box-sizing:border-box; }
+html{ background:var(--bg); scroll-behavior:auto; }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--body);
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+::selection{ background:var(--accent); color:#0a0a0a; }
+
+a{ color:inherit; text-decoration:none; }
+
+::-webkit-scrollbar{ width:10px; }
+::-webkit-scrollbar-track{ background:var(--bg); }
+::-webkit-scrollbar-thumb{ background:var(--line); border-radius:6px; }
+
+/* Focus visibility — never remove without replacing */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+  border-radius:2px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
+}
+
+/* ---------- noise / grain texture, very subtle ---------- */
+.grain{
+  pointer-events:none;
+  position:fixed; inset:0; z-index:2;
+  opacity:0.035;
+  mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- custom cursor ---------- */
+.cursor-dot, .cursor-ring{
+  position:fixed; top:0; left:0; z-index:9999;
+  pointer-events:none;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  will-change:transform;
+}
+.cursor-dot{ width:6px; height:6px; background:var(--accent); }
+.cursor-ring{
+  width:34px; height:34px;
+  border:1px solid rgba(245,166,35,0.55);
+  transition:width .25s ease, height .25s ease, border-color .25s ease, background .25s ease;
+}
+.cursor-ring.is-active{
+  width:64px; height:64px;
+  background:rgba(245,166,35,0.08);
+  border-color:var(--accent);
+}
+@media (hover:none), (pointer:coarse){
+  .cursor-dot, .cursor-ring{ display:none; }
+}
+
+/* ---------- page transition overlay ---------- */
+#transition-overlay{
+  position:fixed; inset:0; z-index:9998;
+  background:var(--bg);
+  transform:translateY(101%);
+  pointer-events:none;
+}
+#transition-overlay .t-label{
+  position:absolute; bottom:2.5rem; left:2.5rem;
+  font-family:var(--mono); font-size:.8rem; color:var(--accent);
+  letter-spacing:.08em;
+}
+
+/* ---------- nav ---------- */
+.site-nav{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:1.4rem clamp(1.25rem,4vw,3rem);
+  background:linear-gradient(to bottom, rgba(10,10,10,.92), rgba(10,10,10,0));
+  backdrop-filter:blur(2px);
+}
+.nav-logo{
+  font-family:var(--mono); font-weight:500; font-size:.95rem;
+  letter-spacing:.02em;
+  display:flex; align-items:center; gap:.5rem;
+}
+.nav-logo .dot{ color:var(--accent); }
+.nav-links{ display:flex; align-items:center; gap:2.2rem; }
+.nav-link{
+  position:relative;
+  font-family:var(--mono); font-size:.8rem; letter-spacing:.03em;
+  color:var(--fg-dim);
+  padding:.2rem 0;
+  transition:color .2s ease;
+}
+.nav-link::after{
+  content:""; position:absolute; left:0; bottom:-3px;
+  width:0; height:1px; background:var(--accent);
+  transition:width .3s cubic-bezier(.65,0,.35,1);
+}
+.nav-link:hover, .nav-link.active{ color:var(--fg); }
+.nav-link:hover::after, .nav-link.active::after{ width:100%; }
+.nav-link.active{ color:var(--accent); }
+
+.status-pill{
+  display:flex; align-items:center; gap:.5rem;
+  font-family:var(--mono); font-size:.72rem; color:var(--fg-dim);
+  border:1px solid var(--line); border-radius:100px;
+  padding:.4rem .8rem;
+}
+.status-pill .ping{
+  width:6px; height:6px; border-radius:50%; background:var(--pass);
+  box-shadow:0 0 0 0 rgba(52,211,153,.6);
+  animation:ping-pulse 2s ease-out infinite;
+}
+@keyframes ping-pulse{
+  0%{ box-shadow:0 0 0 0 rgba(52,211,153,.55); }
+  70%{ box-shadow:0 0 0 7px rgba(52,211,153,0); }
+  100%{ box-shadow:0 0 0 0 rgba(52,211,153,0); }
+}
+
+.nav-burger{ display:none; flex-direction:column; gap:5px; cursor:pointer; z-index:110; }
+.nav-burger span{ width:22px; height:1.5px; background:var(--fg); display:block; transition:transform .3s ease, opacity .3s ease; }
+
+.mobile-nav{
+  position:fixed; inset:0; z-index:105;
+  background:var(--bg-alt);
+  display:flex; flex-direction:column; justify-content:center; gap:1.6rem;
+  padding:2.5rem;
+  transform:translateX(100%);
+  transition:transform .5s cubic-bezier(.65,0,.35,1);
+}
+.mobile-nav.open{ transform:translateX(0); }
+.mobile-nav a{ font-family:var(--display); font-size:2rem; font-weight:600; color:var(--fg); }
+.mobile-nav a span{ color:var(--accent); font-family:var(--mono); font-size:1rem; margin-right:.6rem; }
+
+@media (max-width: 860px){
+  .nav-links, .status-pill{ display:none; }
+  .nav-burger{ display:flex; }
+}
+
+/* ---------- footer ---------- */
+.site-footer{
+  border-top:1px solid var(--line);
+  padding:5rem clamp(1.25rem,4vw,3rem) 2.5rem;
+  background:var(--bg);
+}
+.footer-links a{
+  font-family:var(--mono); font-size:.82rem; color:var(--fg-dim);
+  border-bottom:1px solid transparent;
+  transition:color .2s ease, border-color .2s ease;
+}
+.footer-links a:hover{ color:var(--accent); border-color:var(--accent); }
+
+/* ---------- assertion block — signature component ---------- */
+/* A recurring "test result" motif used for stats, milestones, quotes.   */
+.assert{
+  font-family:var(--mono);
+  border:1px solid var(--line);
+  background:var(--bg-panel);
+  border-radius:8px;
+  padding:1.1rem 1.3rem;
+  position:relative;
+  overflow:hidden;
+}
+.assert::before{
+  content:""; position:absolute; left:0; top:0; bottom:0; width:2px;
+  background:var(--pass);
+}
+.assert .assert-line{ font-size:.78rem; color:var(--fg-faint); }
+.assert .assert-line .k{ color:#7fb3ff; }
+.assert .assert-line .s{ color:var(--accent); }
+.assert .assert-result{
+  margin-top:.55rem; font-size:.85rem; color:var(--pass);
+  display:flex; align-items:center; gap:.5rem;
+}
+.assert .assert-result::before{ content:"✓"; }
+
+/* big display numerals used inside assertion blocks for real, honest metrics */
+.assert-metric{ font-family:var(--display); font-size:2.4rem; font-weight:700; color:var(--fg); line-height:1; margin:.35rem 0; }
+.assert-metric span{ color:var(--accent); }
+
+/* ---------- eyebrow / labels ---------- */
+.eyebrow{
+  font-family:var(--mono); font-size:.75rem; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--accent); display:flex; align-items:center; gap:.6rem;
+}
+.eyebrow::before{ content:""; width:22px; height:1px; background:var(--accent); }
+
+/* ---------- marquee ---------- */
+.marquee-track{
+  display:flex; width:max-content;
+  animation:marquee 34s linear infinite;
+}
+.marquee-track span{
+  font-family:var(--display); font-weight:600; font-size:clamp(1.6rem,4vw,2.6rem);
+  color:transparent; -webkit-text-stroke:1px var(--line);
+  padding:0 2rem; white-space:nowrap;
+}
+.marquee-track span.on{ color:var(--fg); -webkit-text-stroke:0; }
+.marquee-track span.on em{ color:var(--accent); font-style:normal; }
+@keyframes marquee{ from{ transform:translateX(0);} to{ transform:translateX(-50%);} }
+
+/* ---------- magnetic buttons ---------- */
+.btn{
+  font-family:var(--mono); font-size:.85rem; letter-spacing:.03em;
+  display:inline-flex; align-items:center; gap:.6rem;
+  padding:.9rem 1.6rem; border-radius:100px;
+  border:1px solid var(--line);
+  transition:border-color .3s ease, background .3s ease, color .3s ease;
+}
+.btn-fill{ background:var(--accent); color:#0a0a0a; border-color:var(--accent); font-weight:600; }
+.btn-fill:hover{ background:#ffb945; }
+.btn-outline:hover{ border-color:var(--accent); color:var(--accent); }
+.btn-arrow{ transition:transform .3s cubic-bezier(.65,0,.35,1); }
+.btn:hover .btn-arrow{ transform:translateX(4px); }
+
+/* ---------- numbered project rows ---------- */
+.proj-row{
+  border-top:1px solid var(--line);
+  padding:2.1rem 0;
+  display:grid;
+  grid-template-columns:3.5rem 1fr auto auto;
+  align-items:center;
+  gap:1.2rem;
+  transition:padding-left .35s cubic-bezier(.65,0,.35,1);
+}
+.proj-row:last-child{ border-bottom:1px solid var(--line); }
+.proj-row:hover{ padding-left:.6rem; }
+.proj-index{ font-family:var(--mono); color:var(--fg-faint); font-size:.9rem; }
+.proj-title{ font-family:var(--display); font-size:clamp(1.3rem,3vw,2rem); font-weight:600; }
+.proj-tags{ display:flex; flex-wrap:wrap; gap:.4rem; }
+.proj-tag{
+  font-family:var(--mono); font-size:.68rem; color:var(--fg-dim);
+  border:1px solid var(--line); padding:.25rem .6rem; border-radius:100px;
+}
+.proj-arrow{
+  width:2.6rem; height:2.6rem; border-radius:50%; border:1px solid var(--line);
+  display:flex; align-items:center; justify-content:center;
+  transition:all .3s cubic-bezier(.65,0,.35,1);
+}
+.proj-row:hover .proj-arrow{ background:var(--accent); border-color:var(--accent); color:#0a0a0a; transform:rotate(45deg); }
+
+@media (max-width: 700px){
+  .proj-row{ grid-template-columns:2.2rem 1fr; row-gap:.8rem; }
+  .proj-tags, .proj-arrow{ grid-column:2; }
+}
+
+/* ---------- timeline ---------- */
+.tl-item{
+  border-left:1px solid var(--line);
+  padding:0 0 3rem 2rem;
+  position:relative;
+}
+.tl-item::before{
+  content:""; position:absolute; left:-4.5px; top:.35rem;
+  width:8px; height:8px; border-radius:50%; background:var(--bg);
+  border:2px solid var(--accent);
+}
+.tl-item:last-child{ padding-bottom:0; }
+
+/* ---------- reveal ----------
+   Visible by default — JS (gsap.from) animates FROM hidden TO this state
+   at runtime only if it loads successfully. If any script fails, content
+   was never hidden in the markup/CSS, so it just sits there, fully readable. */
+.reveal{ opacity:1; }
+
+/* ---------- misc layout helpers ---------- */
+.container{ max-width:1180px; margin-inline:auto; padding-inline:clamp(1.25rem,4vw,3rem); }
+.hairline{ height:1px; background:var(--line); border:0; }
+
+.skill-pill{
+  font-family:var(--mono); font-size:.78rem; color:var(--fg-dim);
+  border:1px solid var(--line); border-radius:100px; padding:.5rem 1rem;
+  transition:border-color .25s ease, color .25s ease;
+}
+.skill-pill:hover{ border-color:var(--accent); color:var(--fg); }
+
+.form-field{
+  width:100%; background:transparent; border:0; border-bottom:1px solid var(--line);
+  color:var(--fg); font-family:var(--body); font-size:1rem; padding:.85rem .1rem;
+  transition:border-color .25s ease;
+}
+.form-field:focus{ outline:none; border-color:var(--accent); }
+.form-field::placeholder{ color:var(--fg-faint); }
+label.field-label{ font-family:var(--mono); font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--fg-faint); }

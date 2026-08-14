@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Deepak</title>
+    <meta
+      name="description"
+      content="Get in touch with Deepak — open to QA Engineer / SDET roles."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { bg: "#0a0a0a", accent: "#f5a623" },
+            fontFamily: {
+              display: ['"Space Grotesk"', "sans-serif"],
+              body: ['"Inter"', "sans-serif"],
+              mono: ['"JetBrains Mono"', "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  </head>
+  <body class="font-body">
+    <div class="grain"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div id="transition-overlay"><span class="t-label">deepak.dev</span></div>
+
+    <nav class="site-nav">
+      <a href="index.html" class="nav-logo"
+        >DEEPAK<span class="dot">.</span
+        ><span style="color: var(--fg-faint)">&lt;qa/&gt;</span></a
+      >
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Work</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="status-pill">
+        <span class="ping"></span>Open to QA / SDET roles
+      </div>
+      <div class="nav-burger"><span></span><span></span><span></span></div>
+    </nav>
+    <div class="mobile-nav">
+      <a href="index.html"><span>01</span>Home</a>
+      <a href="about.html"><span>02</span>About</a>
+      <a href="projects.html"><span>03</span>Work</a>
+      <a href="resume.html"><span>04</span>Resume</a>
+      <a href="contact.html"><span>05</span>Contact</a>
+    </div>
+
+    <header class="container pt-40 pb-14">
+      <p class="eyebrow reveal">Contact</p>
+      <h1
+        class="font-display font-extrabold mt-4 leading-[0.98] reveal"
+        style="font-size: clamp(2.4rem, 7vw, 5rem); max-width: 18ch"
+      >
+        Say hello. I check this inbox like I check test results.
+      </h1>
+    </header>
+
+    <section class="container pb-24 grid md:grid-cols-[1.1fr_0.9fr] gap-14">
+      <!-- FORM -->
+      <form id="contact-form" class="reveal space-y-7">
+        <div>
+          <label class="field-label" for="name">Your name</label>
+          <input
+            class="form-field mt-2"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Full name"
+            required
+          />
+        </div>
+        <div>
+          <label class="field-label" for="email">Your email</label>
+          <input
+            class="form-field mt-2"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@company.com"
+            required
+          />
+        </div>
+        <div>
+          <label class="field-label" for="subject">Subject</label>
+          <input
+            class="form-field mt-2"
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="QA Engineer opening / freelance work / just saying hi"
+          />
+        </div>
+        <div>
+          <label class="field-label" for="message">Message</label>
+          <textarea
+            class="form-field mt-2"
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="What's on your mind?"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-fill magnetic">
+          Send message <span class="btn-arrow">→</span>
+        </button>
+        <p class="text-xs" style="color: var(--fg-faint)">
+          Opens your email client with this message pre-filled, addressed to
+          deepakthakur.codr@gmail.com.
+        </p>
+      </form>
+
+      <!-- SIDE INFO -->
+      <div class="reveal space-y-8">
+        <div class="assert">
+          <div class="assert-line">
+            get(<span class="s">'availability'</span>)
+          </div>
+          <div class="assert-result">Open to QA Engineer / SDET roles</div>
+          <div class="assert-line mt-2" style="color: var(--fg-dim)">
+            Based in New Delhi, India — open to remote and on-site
+          </div>
+        </div>
+
+        <div>
+          <p class="eyebrow">Direct</p>
+          <div class="mt-4 space-y-3 font-mono text-sm">
+            <a
+              href="mailto:deepakthakur.codr@gmail.com"
+              class="flex items-center justify-between border-b py-3"
+              style="border-color: var(--line)"
+            >
+              <span>Email</span
+              ><span style="color: var(--accent)"
+                >deepakthakur.codr@gmail.com</span
+              >
+            </a>
+            <a
+              href="https://www.linkedin.com/in/deepakthakur22"
+              target="_blank"
+              rel="noopener"
+              class="flex items-center justify-between border-b py-3"
+              style="border-color: var(--line)"
+            >
+              <span>LinkedIn</span
+              ><span style="color: var(--accent)">/in/deepakthakur22</span>
+            </a>
+            <a
+              href="https://github.com/Deepak-thakur-321"
+              target="_blank"
+              rel="noopener"
+              class="flex items-center justify-between border-b py-3"
+              style="border-color: var(--line)"
+            >
+              <span>GitHub</span
+              ><span style="color: var(--accent)">/Deepak-thakur-321</span>
+            </a>
+            <a
+              href="https://wa.me/918375919101"
+              target="_blank"
+              rel="noopener"
+              class="flex items-center justify-between py-3"
+            >
+              <span>WhatsApp</span
+              ><span style="color: var(--accent)">+91 83759 19101</span>
+            </a>
+          </div>
+        </div>
+
+        <a
+          href="assets/Deepak-Resume.pdf"
+          download
+          class="btn btn-outline magnetic w-full justify-center"
+          >Download resume <span class="btn-arrow">↓</span></a
+        >
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div
+        class="container flex flex-col md:flex-row md:items-center justify-between gap-6"
+      >
+        <div>
+          <p class="font-display font-bold text-xl">Deepak</p>
+          <p style="color: var(--fg-faint)" class="text-sm mt-1">
+            New Delhi, India — open to QA Engineer / SDET roles
+          </p>
+        </div>
+        <div class="footer-links flex flex-wrap gap-x-6 gap-y-2">
+          <a
+            href="https://www.linkedin.com/in/deepakthakur22"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/Deepak-thakur-321"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+          <a href="mailto:deepakthakur.codr@gmail.com">Email</a>
+          <a href="resume.html">Resume</a>
+        </div>
+      </div>
+      <div
+        class="container mt-10 pt-6"
+        style="
+          border-top: 1px solid var(--line-soft);
+          color: var(--fg-faint);
+          font-family: var(--mono);
+          font-size: 0.72rem;
+        "
+      >
+        © 2026 Deepak. Built by hand, tested on purpose.
+      </div>
+    </footer>
+
+    <script src="shared.js"></script>
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const subject =
+            document.getElementById("subject").value || "Portfolio contact";
+          const message = document.getElementById("message").value;
+          const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+          window.location.href = `mailto:deepakthakur.codr@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+    </script>
+  </body>
+</html>
