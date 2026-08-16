@@ -1,303 +1,348 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Deepak — Full Stack Developer × QA Automation Engineer</title>
-    <meta
-      name="description"
-      content="Deepak — Frontend/MERN developer transitioning into QA automation (Playwright). Full stack developer and QA/SDET hybrid based in New Delhi."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: { bg: "#0a0a0a", accent: "#f5a623" },
-            fontFamily: {
-              display: ['"Space Grotesk"', "sans-serif"],
-              body: ['"Inter"', "sans-serif"],
-              mono: ['"JetBrains Mono"', "monospace"],
-            },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepak - Full Stack Developer × QA Automation Engineer</title>
+  <meta name="description"
+    content="Deepak — Frontend/MERN developer transitioning into QA automation (Playwright). Full stack developer and QA/SDET hybrid based in New Delhi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { bg: "#0a0a0a", accent: "#f5a623" },
+          fontFamily: {
+            display: ['"Space Grotesk"', "sans-serif"],
+            body: ['"Inter"', "sans-serif"],
+            mono: ['"JetBrains Mono"', "monospace"],
           },
         },
-      };
-    </script>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
-  </head>
-  <body class="font-body">
-    <div class="grain"></div>
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring"></div>
-    <div id="transition-overlay"><span class="t-label">deepak.dev</span></div>
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+</head>
 
-    <!-- NAV -->
-    <nav class="site-nav">
-      <a href="index.html" class="nav-logo"
-        >DEEPAK<span class="dot">.</span
-        ><span class="text-fg-dim" style="color: var(--fg-faint)"
-          >&lt;qa/&gt;</span
-        ></a
-      >
-      <div class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="projects.html" class="nav-link">Work</a>
-        <a href="resume.html" class="nav-link">Resume</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </div>
-      <div class="status-pill">
-        <span class="ping"></span>Open to QA / SDET roles
-      </div>
-      <div class="nav-burger"><span></span><span></span><span></span></div>
-    </nav>
+<body class="font-body">
+  <div class="grain"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div id="transition-overlay"><span class="t-label">deepak.dev</span></div>
 
-    <div class="mobile-nav">
-      <a href="index.html"><span>01</span>Home</a>
-      <a href="about.html"><span>02</span>About</a>
-      <a href="projects.html"><span>03</span>Work</a>
-      <a href="resume.html"><span>04</span>Resume</a>
-      <a href="contact.html"><span>05</span>Contact</a>
+  <!-- NAV -->
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">DEEPAK<span class="dot">.</span><span class="text-fg-dim"
+        style="color: var(--fg-faint)">&lt;qa/&gt;</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Work</a>
+      <a href="resume.html" class="nav-link">Resume</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <div class="status-pill">
+      <span class="ping"></span>Open to QA / SDET roles
+    </div>
+    <div class="nav-burger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="index.html"><span>01</span>Home</a>
+    <a href="about.html"><span>02</span>About</a>
+    <a href="projects.html"><span>03</span>Work</a>
+    <a href="resume.html"><span>04</span>Resume</a>
+    <a href="contact.html"><span>05</span>Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <header class="relative min-h-screen flex flex-col justify-center overflow-hidden pt-28 pb-16" data-hero-tl>
+    <div class="container relative z-10">
+      <p class="eyebrow reveal">
+        Full stack developer → QA automation engineer
+      </p>
+
+      <h1 class="font-display font-extrabold leading-[0.95] mt-6" style="font-size: clamp(2.6rem, 10vw, 7.2rem)">
+        <span class="block overflow-hidden"><span data-hero-word class="inline-block">I build</span></span>
+        <span class="block overflow-hidden"><span data-hero-word class="inline-block"
+            style="color: var(--accent)">software.</span></span>
+        <span class="block overflow-hidden"><span data-hero-word class="inline-block">Then I break it</span></span>
+        <span class="block overflow-hidden"><span data-hero-word class="inline-block">on purpose.</span></span>
+      </h1>
+
+      <div data-hero-sub class="mt-9 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+        <p class="max-w-md text-lg" style="color: var(--fg-dim)">
+          Deepak - a MERN developer out of New Delhi who taught himself to
+          ship products, then taught himself to interrogate them. Now looking
+          for QA Engineer / SDET roles where both halves matter.
+        </p>
+        <div class="flex gap-3">
+          <a href="projects.html" class="btn btn-fill magnetic">See the work <span class="btn-arrow">→</span></a>
+          <a href="contact.html" class="btn btn-outline magnetic">Get in touch</a>
+        </div>
+      </div>
     </div>
 
-    <!-- HERO -->
-    <header
-      class="relative min-h-screen flex flex-col justify-center overflow-hidden pt-28 pb-16"
-      data-hero-tl
-    >
-      <div class="container relative z-10">
-        <p class="eyebrow reveal">
-          Full stack developer → QA automation engineer
-        </p>
+    <div data-hero-fade class="container mt-14">
+      <div class="assert max-w-md">
+        <div class="assert-line">
+          <span class="k">const</span> candidate =
+          <span class="s">"Deepak"</span>;
+        </div>
+        <div class="assert-line">
+          expect(candidate.status).toBe(<span class="s">"OPEN_TO_QA_ROLES"</span>);
+        </div>
+        <div class="assert-result">1 passed — New Delhi, India</div>
+      </div>
+    </div>
+  </header>
 
-        <h1
-          class="font-display font-extrabold leading-[0.95] mt-6"
-          style="font-size: clamp(2.6rem, 10vw, 7.2rem)"
-        >
-          <span class="block overflow-hidden"
-            ><span data-hero-word class="inline-block">I build</span></span
-          >
-          <span class="block overflow-hidden"
-            ><span
-              data-hero-word
-              class="inline-block"
-              style="color: var(--accent)"
-              >software.</span
-            ></span
-          >
-          <span class="block overflow-hidden"
-            ><span data-hero-word class="inline-block"
-              >Then I break it</span
-            ></span
-          >
-          <span class="block overflow-hidden"
-            ><span data-hero-word class="inline-block">on purpose.</span></span
-          >
-        </h1>
-
-        <div
-          data-hero-sub
-          class="mt-9 flex flex-col md:flex-row md:items-end md:justify-between gap-8"
-        >
-          <p class="max-w-md text-lg" style="color: var(--fg-dim)">
-            Deepak — a MERN developer out of New Delhi who taught himself to
-            ship products, then taught himself to interrogate them. Now looking
-            for QA Engineer / SDET roles where both halves matter.
-          </p>
-          <div class="flex gap-3">
-            <a href="projects.html" class="btn btn-fill magnetic"
-              >See the work <span class="btn-arrow">→</span></a
-            >
-            <a href="contact.html" class="btn btn-outline magnetic"
-              >Get in touch</a
-            >
-          </div>
+  <!-- METRICS / ASSERTIONS -->
+  <section class="container py-10 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="assert reveal md:col-span-2 md:row-span-1">
+        <div class="assert-line">
+          test(<span class="s">'VELOR e-commerce app'</span>)
+        </div>
+        <div class="assert-metric"><span data-count="75">0</span>+</div>
+        <div class="assert-line" style="color: var(--fg-dim)">
+          Playwright E2E tests covering critical user flows, navigation,
+          validation, and application behavior.
         </div>
       </div>
 
-      <div data-hero-fade class="container mt-14">
-        <div class="assert max-w-md">
-          <div class="assert-line">
-            <span class="k">const</span> candidate =
-            <span class="s">"Deepak"</span>;
-          </div>
-          <div class="assert-line">
-            expect(candidate.status).toBe(<span class="s"
-              >"OPEN_TO_QA_ROLES"</span
-            >);
-          </div>
-          <div class="assert-result">1 passed — New Delhi, India</div>
+      <div class="assert reveal">
+        <div class="assert-line">
+          test(<span class="s">'QA project range'</span>)
+        </div>
+        <div class="assert-metric">Manual <span>+</span> Auto</div>
+        <div class="assert-line" style="color: var(--fg-dim)">
+          Manual test cases, bug reporting, exploratory testing, and
+          Playwright automation.
         </div>
       </div>
-    </header>
 
-    <!-- METRICS / ASSERTIONS -->
-    <section class="container py-10 md:py-16">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="assert reveal md:col-span-2 md:row-span-1">
-          <div class="assert-line">
-            test(<span class="s">'VELOR e-commerce app'</span>)
-          </div>
-          <div class="assert-metric"><span data-count="20">0</span>+</div>
-          <div class="assert-line" style="color: var(--fg-dim)">
-            Playwright E2E tests, Page Object Model, wired into GitHub Actions
-            CI
-          </div>
+      <div class="assert reveal">
+        <div class="assert-line">
+          test(<span class="s">'development background'</span>)
         </div>
-        <div class="assert reveal">
-          <div class="assert-line">
-            test(<span class="s">'QA project range'</span>)
-          </div>
-          <div class="assert-metric">Manual <span>+</span> Auto</div>
-          <div class="assert-line" style="color: var(--fg-dim)">
-            Excel test cases through to automated E2E suites
-          </div>
+        <div class="assert-metric">React <span>·</span> MERN</div>
+        <div class="assert-line" style="color: var(--fg-dim)">
+          Frontend development experience with React, JavaScript, Node.js,
+          Express, MongoDB, and responsive UI development.
         </div>
-        <div class="assert reveal">
-          <div class="assert-line">
-            test(<span class="s">'stack breadth'</span>)
-          </div>
-          <div class="assert-metric">React <span>·</span> Node</div>
-          <div class="assert-line" style="color: var(--fg-dim)">
-            Full MERN stack, plus Angular/PrimeNG in production
-          </div>
+      </div>
+
+      <div class="assert reveal md:col-span-2">
+        <div class="assert-line">
+          test(<span class="s">'why it matters'</span>)
         </div>
-        <div class="assert reveal md:col-span-2">
-          <div class="assert-line">
-            test(<span class="s">'why it matters'</span>)
-          </div>
-          <div
-            class="assert-line"
-            style="
+        <div class="assert-line" style="
               margin-top: 0.5rem;
               color: var(--fg);
               font-size: 0.92rem;
               line-height: 1.6;
-            "
-          >
-            I write the code that ships, and the tests that catch what shouldn't
-            have. That's a QA engineer who doesn't need the codebase explained
-            to them.
-          </div>
+            ">
+          I understand both sides of the product — building the application
+          and testing it. My development background helps me understand
+          application behavior, debug issues, and approach testing from a
+          user's and developer's perspective.
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- TOOLKIT -->
+  <section class="container py-10 md:py-16">
+    <p class="eyebrow reveal">Daily toolkit — real work</p>
+    <div class="grid md:grid-cols-2 gap-5 mt-8">
+      <!-- Excel — real screenshot -->
+      <div class="mock-window reveal">
+        <div class="mock-titlebar">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <span class="mock-title">Excel — Deepak_Thakur_QA_Internship_Assignment.xlsx</span>
+        </div>
+        <img class="mock-shot" src="./assets/Screenshot 2026-08-16 182811.png"
+          alt="Real Excel test case sheet for the AYUVYA QA assignment, Functional Testing tab" />
+        <div class="mock-caption">
+          <b>Excel</b> — manual test case sheet for the AYUVYA QA assignment
+          (real file)
+        </div>
+      </div>
+
+      <!-- SQL — real photo -->
+      <div class="mock-window reveal">
+        <div class="mock-titlebar">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <span class="mock-title">MySQL 8.0 Command Line Client</span>
+        </div>
+        <img class="mock-shot" src="./assets/Screenshot 2026-08-16 202818.png"
+          alt="Real MySQL command line session — describing a table and inserting rows" style="object-position: top" />
+        <div class="mock-caption">
+          <b>SQL</b> — practicing schema design and inserts on the MySQL CLI
+          (real session)
+        </div>
+      </div>
+
+      <!-- Playwright — code mockup -->
+      <div class="mock-window reveal">
+        <div class="code-tabs">
+          <span class="active">login.spec.ts</span><span>playwright.config.ts</span>
+        </div>
+        <div class="code-body">
+          <img class="mock-shot" src="./assets/Screenshot 2026-08-16 203052.png"
+            alt="Real MySQL command line session — describing a table and inserting rows"
+            style="object-position: top" />
+        </div>
+        <div class="term-body">
+          <span style="color: var(--fg-faint)">$</span> npx playwright test<br />
+          <span class="term-pass">✓ 75 passed</span>
+          <span style="color: var(--fg-faint)">(38.1s)</span>
+        </div>
+        <div class="mock-caption">
+          <b>Playwright</b> — actual pattern used across the VELOR E2E suite
+          (illustrative, real repo on GitHub)
+        </div>
+      </div>
+
+      <!-- Postman — dashboard mockup -->
+      <div class="mock-window reveal">
+          <div class="mock-titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <span class="mock-title">Postman — VELOR API</span>
+          </div>
+          <div class="pm-layout">
+            <div class="pm-sidebar">
+              <div class="pm-sidebar-title">VELOR API</div>
+              <div class="pm-req"><span class="pm-tag get">GET</span> /products</div>
+              <div class="pm-req active"><span class="pm-tag get">GET</span> /products/:id</div>
+              <div class="pm-req"><span class="pm-tag post">POST</span> /auth/login</div>
+              <div class="pm-req"><span class="pm-tag get">GET</span> /cart</div>
+              <div class="pm-req"><span class="pm-tag del">DEL</span> /cart/:id</div>
+            </div>
+            <div class="pm-main">
+              <div class="pm-toolbar">
+                <span class="pm-method">GET</span>
+                <span class="pm-url">https://api.velor.app/v1/products/101</span>
+                <span class="pm-send">Send</span>
+              </div>
+              <div class="pm-tabs">
+                <span class="active">Body</span><span>Headers</span><span>Tests</span><span style="margin-left: auto"><span class="pm-status">200 OK</span> · 142 ms</span>
+              </div>
+              <div class="pm-body pm-json">
+                <div><span class="ln">1</span>{</div>
+                <div><span class="ln">2</span>&nbsp;&nbsp;<span class="k">"id"</span>: <span class="n">101</span>,</div>
+                <div><span class="ln">3</span>&nbsp;&nbsp;<span class="k">"name"</span>: <span class="s">"Silk Wrap Dress"</span>,</div>
+                <div><span class="ln">4</span>&nbsp;&nbsp;<span class="k">"price"</span>: <span class="n">2499</span>,</div>
+                <div><span class="ln">5</span>&nbsp;&nbsp;<span class="k">"inStock"</span>: <span class="n">true</span></div>
+                <div><span class="ln">6</span>}</div>
+              </div>
+              <div class="pm-tests">
+                <div class="pm-tests-label">Test Results — 3/3 passed</div>
+                <div class="pm-test-row"><span class="term-pass">✓</span> Status code is 200</div>
+                <div class="pm-test-row"><span class="term-pass">✓</span> Response time is below 300ms</div>
+                <div class="pm-test-row"><span class="term-pass">✓</span> Response has "inStock" field</div>
+              </div>
+            </div>
+          </div>
+          <div class="mock-caption">
+            <b>Postman</b> — request/response + test-script pattern used for API testing
+            (illustrative — real collection coming soon)
+          </div>
+        </div>
+ 
+      </div>
     </section>
 
-    <!-- FEATURED WORK -->
-    <section class="container py-16 md:py-24">
-      <div class="flex items-end justify-between flex-wrap gap-4 reveal">
-        <h2
-          class="font-display font-bold"
-          style="font-size: clamp(1.8rem, 4vw, 3rem)"
-        >
-          Selected work
-        </h2>
-        <a href="projects.html" class="btn btn-outline magnetic"
-          >All projects <span class="btn-arrow">→</span></a
-        >
-      </div>
+  <!-- FEATURED WORK -->
+  <section class="container py-16 md:py-24">
+    <div class="flex items-end justify-between flex-wrap gap-4 reveal">
+      <h2 class="font-display font-bold" style="font-size: clamp(1.8rem, 4vw, 3rem)">
+        Selected work
+      </h2>
+      <a href="projects.html" class="btn btn-outline magnetic">All projects <span class="btn-arrow">→</span></a>
+    </div>
 
-      <div class="mt-8">
-        <a href="projects.html" class="proj-row reveal">
-          <span class="proj-index">01</span>
-          <span class="proj-title">VELOR</span>
-          <span class="proj-tags">
-            <span class="proj-tag">React</span
-            ><span class="proj-tag">Redux Toolkit</span
-            ><span class="proj-tag">Playwright</span>
-          </span>
-          <span class="proj-arrow">↗</span>
-        </a>
-        <a href="projects.html" class="proj-row reveal">
-          <span class="proj-index">02</span>
-          <span class="proj-title">TechStock Pro</span>
-          <span class="proj-tags">
-            <span class="proj-tag">Vanilla JS</span
-            ><span class="proj-tag">Tailwind</span
-            ><span class="proj-tag">data-testid</span>
-          </span>
-          <span class="proj-arrow">↗</span>
-        </a>
-        <a href="projects.html" class="proj-row reveal">
-          <span class="proj-index">03</span>
-          <span class="proj-title">AYUVYA — QA assignment</span>
-          <span class="proj-tags">
-            <span class="proj-tag">Manual Testing</span
-            ><span class="proj-tag">Bug Reporting</span>
-          </span>
-          <span class="proj-arrow">↗</span>
-        </a>
-      </div>
-    </section>
+    <div class="mt-8">
+      <a href="projects.html" class="proj-row reveal">
+        <span class="proj-index">01</span>
+        <span class="proj-title">VELOR</span>
+        <span class="proj-tags">
+          <span class="proj-tag">React</span><span class="proj-tag">Redux Toolkit</span><span
+            class="proj-tag">Playwright</span>
+        </span>
+        <span class="proj-arrow">↗</span>
+      </a>
+      <a href="projects.html" class="proj-row reveal">
+        <span class="proj-index">02</span>
+        <span class="proj-title">TechStock Pro</span>
+        <span class="proj-tags">
+          <span class="proj-tag">Vanilla JS</span><span class="proj-tag">Tailwind</span><span
+            class="proj-tag">data-testid</span>
+        </span>
+        <span class="proj-arrow">↗</span>
+      </a>
+      <a href="projects.html" class="proj-row reveal">
+        <span class="proj-index">03</span>
+        <span class="proj-title">AYUVYA — QA assignment</span>
+        <span class="proj-tags">
+          <span class="proj-tag">Manual Testing</span><span class="proj-tag">Bug Reporting</span>
+        </span>
+        <span class="proj-arrow">↗</span>
+      </a>
+    </div>
+  </section>
 
-    <!-- ABOUT TEASER -->
-    <section
-      class="container py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center"
-    >
-      <div class="reveal">
-        <p class="eyebrow">The short version</p>
-        <h2
-          class="font-display font-bold mt-4"
-          style="font-size: clamp(1.8rem, 4vw, 2.8rem)"
-        >
-          Self-taught developer. Now self-taught test engineer. Same discipline,
-          sharper edge.
-        </h2>
-      </div>
-      <div
-        class="reveal"
-        style="color: var(--fg-dim); font-size: 1.05rem; line-height: 1.7"
-      >
-        <p>
-          No CS degree — a BA from IGNOU and a lot of nights building things
-          until they worked. That taught me how software gets made. Learning
-          Playwright taught me how it fails.
-        </p>
-        <p class="mt-4">
-          I'm currently sharpening SQL and API testing, and treating interview
-          practice as seriously as the tooling.
-        </p>
-        <a href="about.html" class="btn btn-outline magnetic mt-6"
-          >Read the full story <span class="btn-arrow">→</span></a
-        >
-      </div>
-    </section>
+  <!-- ABOUT TEASER -->
+  <section class="container py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+    <div class="reveal">
+      <p class="eyebrow">The short version</p>
+      <h2 class="font-display font-bold mt-4" style="font-size: clamp(1.8rem, 4vw, 2.8rem)">
+        Self-taught developer. Now self-taught test engineer. Same discipline,
+        sharper edge.
+      </h2>
+    </div>
+    <div class="reveal" style="color: var(--fg-dim); font-size: 1.05rem; line-height: 1.7">
+      <p>
+        No CS degree — a BA from IGNOU and a lot of nights building things
+        until they worked. That taught me how software gets made. Learning
+        Playwright taught me how it fails.
+      </p>
+      <p class="mt-4">
+        I'm currently sharpening SQL and API testing, and treating interview
+        practice as seriously as the tooling.
+      </p>
+      <a href="about.html" class="btn btn-outline magnetic mt-6">Read the full story <span
+          class="btn-arrow">→</span></a>
+    </div>
+  </section>
 
-    <!-- SKILLS MARQUEE -->
-    <section
-      class="py-14 border-t border-b overflow-hidden"
-      style="border-color: var(--line)"
-    >
-      <div class="marquee-track">
-        <span class="on">React <em>·</em></span
-        ><span class="on">Node.js <em>·</em></span
-        ><span class="on">Playwright <em>·</em></span>
-        <span class="on">MongoDB <em>·</em></span
-        ><span class="on">Manual Testing <em>·</em></span
-        ><span class="on">Express.js <em>·</em></span>
-        <span class="on">Postman <em>·</em></span
-        ><span class="on">React <em>·</em></span
-        ><span class="on">Node.js <em>·</em></span>
-        <span class="on">Playwright <em>·</em></span
-        ><span class="on">MongoDB <em>·</em></span
-        ><span class="on">Manual Testing <em>·</em></span>
-        <span class="on">Express.js <em>·</em></span
-        ><span class="on">Postman <em>·</em></span>
-      </div>
-    </section>
+  <!-- SKILLS MARQUEE -->
+  <section class="py-14 border-t border-b overflow-hidden" style="border-color: var(--line)">
+    <div class="marquee-track">
+      <span class="on">React <em>·</em></span><span class="on">Node.js <em>·</em></span><span class="on">Playwright
+        <em>·</em></span>
+      <span class="on">MongoDB <em>·</em></span><span class="on">Manual Testing <em>·</em></span><span
+        class="on">Express.js <em>·</em></span>
+      <span class="on">Postman <em>·</em></span><span class="on">React <em>·</em></span><span class="on">Node.js
+        <em>·</em></span>
+      <span class="on">Playwright <em>·</em></span><span class="on">MongoDB <em>·</em></span><span class="on">Manual
+        Testing <em>·</em></span>
+      <span class="on">Express.js <em>·</em></span><span class="on">Postman <em>·</em></span>
+    </div>
+  </section>
 
-    <!-- CTA BANNER -->
-    <section class="container py-24 md:py-36 text-center relative reveal">
-      <div
-        style="
+  <!-- CTA BANNER -->
+  <section class="container py-24 md:py-36 text-center relative reveal">
+    <div style="
           position: absolute;
           inset: 0;
           background: radial-gradient(
@@ -306,61 +351,42 @@
             transparent 65%
           );
           pointer-events: none;
-        "
-      ></div>
-      <p class="eyebrow justify-center">Currently open to work</p>
-      <h2
-        class="font-display font-extrabold mt-5"
-        style="font-size: clamp(2.2rem, 7vw, 4.6rem)"
-      >
-        Let's build something<br />that doesn't break.
-      </h2>
-      <a href="contact.html" class="btn btn-fill magnetic mt-9 inline-flex"
-        >Start a conversation <span class="btn-arrow">→</span></a
-      >
-    </section>
+        "></div>
+    <p class="eyebrow justify-center">Currently open to work</p>
+    <h2 class="font-display font-extrabold mt-5" style="font-size: clamp(2.2rem, 7vw, 4.6rem)">
+      Let's build something<br />that doesn't break.
+    </h2>
+    <a href="contact.html" class="btn btn-fill magnetic mt-9 inline-flex">Start a conversation <span
+        class="btn-arrow">→</span></a>
+  </section>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div
-        class="container flex flex-col md:flex-row md:items-center justify-between gap-6"
-      >
-        <div>
-          <p class="font-display font-bold text-xl">Deepak</p>
-          <p style="color: var(--fg-faint)" class="text-sm mt-1">
-            New Delhi, India — open to QA Engineer / SDET roles
-          </p>
-        </div>
-        <div class="footer-links flex flex-wrap gap-x-6 gap-y-2">
-          <a
-            href="https://www.linkedin.com/in/deepakthakur22"
-            target="_blank"
-            rel="noopener"
-            >LinkedIn</a
-          >
-          <a
-            href="https://github.com/Deepak-thakur-321"
-            target="_blank"
-            rel="noopener"
-            >GitHub</a
-          >
-          <a href="mailto:deepakthakur.codr@gmail.com">Email</a>
-          <a href="resume.html">Resume</a>
-        </div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div>
+        <p class="font-display font-bold text-xl">Deepak</p>
+        <p style="color: var(--fg-faint)" class="text-sm mt-1">
+          New Delhi, India — open to QA Engineer / SDET roles
+        </p>
       </div>
-      <div
-        class="container mt-10 pt-6"
-        style="
+      <div class="footer-links flex flex-wrap gap-x-6 gap-y-2">
+        <a href="https://www.linkedin.com/in/deepakthakur22" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Deepak-thakur-321" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:deepakthakur.codr@gmail.com">Email</a>
+        <a href="resume.html">Resume</a>
+      </div>
+    </div>
+    <div class="container mt-10 pt-6" style="
           border-top: 1px solid var(--line-soft);
           color: var(--fg-faint);
           font-family: var(--mono);
           font-size: 0.72rem;
-        "
-      >
-        © 2026 Deepak. Built by hand, tested on purpose.
-      </div>
-    </footer>
+        ">
+      © 2026 Deepak. Built by hand, tested on purpose.
+    </div>
+  </footer>
 
-    <script src="shared.js"></script>
-  </body>
+  <script src="shared.js"></script>
+</body>
+
 </html>

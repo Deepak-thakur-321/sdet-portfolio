@@ -158,3 +158,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   } catch (e) { console.warn("Counters failed", e); }
 });
+
+
