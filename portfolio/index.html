@@ -66,41 +66,58 @@
   <!-- HERO -->
   <header class="relative min-h-screen flex flex-col justify-center overflow-hidden pt-28 pb-16" data-hero-tl>
     <div class="container relative z-10">
-      <p class="eyebrow reveal">
-        Full stack developer → QA automation engineer
-      </p>
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow reveal">
+            Full stack developer → QA automation engineer
+          </p>
 
-      <h1 class="font-display font-extrabold leading-[0.95] mt-6" style="font-size: clamp(2.6rem, 10vw, 7.2rem)">
-        <span class="block overflow-hidden"><span data-hero-word class="inline-block">I build</span></span>
-        <span class="block overflow-hidden"><span data-hero-word class="inline-block"
-            style="color: var(--accent)">software.</span></span>
-        <span class="block overflow-hidden"><span data-hero-word class="inline-block">Then I break it</span></span>
-        <span class="block overflow-hidden"><span data-hero-word class="inline-block">on purpose.</span></span>
-      </h1>
+          <h1 class="font-display font-extrabold leading-[0.95] mt-6" style="font-size: clamp(2.6rem, 7vw, 5.6rem)">
+            <span class="block overflow-hidden"><span data-hero-word class="inline-block">I build
+                <span style="color: var(--accent)">software.</span></span></span>
 
-      <div data-hero-sub class="mt-9 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-        <p class="max-w-md text-lg" style="color: var(--fg-dim)">
-          Deepak - a MERN developer out of New Delhi who taught himself to
-          ship products, then taught himself to interrogate them. Now looking
-          for QA Engineer / SDET roles where both halves matter.
-        </p>
-        <div class="flex gap-3">
-          <a href="projects.html" class="btn btn-fill magnetic">See the work <span class="btn-arrow">→</span></a>
-          <a href="contact.html" class="btn btn-outline magnetic">Get in touch</a>
+            <span class="block overflow-hidden"><span data-hero-word class="inline-block">Then I break it</span></span>
+            <span class="block overflow-hidden"><span data-hero-word class="inline-block">on purpose.</span></span>
+          </h1>
+
+          <div data-hero-sub class="mt-9 flex flex-col gap-6">
+            <p class="max-w-md text-lg" style="color: var(--fg-dim)">
+              Deepak - a MERN developer out of New Delhi who taught himself to
+              ship products, then taught himself to interrogate them. Now
+              looking for QA Engineer / SDET roles where both halves matter.
+            </p>
+            <div class="flex gap-3 flex-wrap">
+              <a href="projects.html" class="btn btn-fill magnetic">See the work <span class="btn-arrow">→</span></a>
+              <a href="contact.html" class="btn btn-outline magnetic">Get in touch</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- live "typing" code panel — pure CSS, no JS dependency -->
+         <div class="hero-code-card reveal">
+          <div class="mock-titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <span class="mock-title">login.spec.ts — Playwright</span>
+          </div>
+          <div class="hero-code-body">
+            <div class="hl-line"><span class="type-line" style="--chars:40; --steps:40; animation-duration:.88s; animation-delay:.3s;"><span class="code-fn">test.describe</span>(<span class="code-str">'Authentication'</span>, () => {</span></div>
+            <div class="hl-line"><span class="type-line" style="--chars:72; --steps:72; animation-duration:1.58s; animation-delay:1.18s;">&nbsp;&nbsp;<span class="code-fn">test</span>(<span class="code-str">'user can login with valid credentials'</span>, <span class="code-kw">async</span> ({ page }) => {</span></div>
+            <div class="hl-line"><span class="type-line" style="--chars:31; --steps:31; animation-duration:.68s; animation-delay:2.76s;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-kw">await</span> page.goto(<span class="code-str">'/login'</span>);</span></div>
+            <div class="hl-line"><span class="type-line" style="--chars:65; --steps:65; animation-duration:1.43s; animation-delay:3.44s;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-kw">await</span> page.fill(<span class="code-str">'[data-testid="email"]'</span>, <span class="code-str">'test@velor.app'</span>);</span></div>
+            <div class="hl-line"><span class="type-line" style="--chars:61; --steps:61; animation-duration:1.34s; animation-delay:4.87s;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-kw">await</span> page.fill(<span class="code-str">'[data-testid="password"]'</span>, <span class="code-str">'••••••••'</span>);</span></div>
+            <div class="hl-line"><span class="type-line" style="--chars:51; --steps:51; animation-duration:1.12s; animation-delay:6.21s;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-kw">await</span> page.click(<span class="code-str">'[data-testid="login-btn"]'</span>);</span></div>
+            <div class="hl-line"><span class="type-line" style="--chars:48; --steps:48; animation-duration:1.06s; animation-delay:7.33s;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-kw">await</span> <span class="code-fn">expect</span>(page).toHaveURL(<span class="code-str">'/dashboard'</span>);</span></div>
+            <div class="hl-line"><span class="type-line" style="--chars:74; --steps:74; animation-duration:1.63s; animation-delay:8.39s;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-kw">await</span> <span class="code-fn">expect</span>(page.locator(<span class="code-str">'[data-testid="welcome"]'</span>)).toBeVisible();</span></div>
+            <div class="hl-line"><span class="type-line" style="--chars:5; --steps:5; animation-duration:.12s; animation-delay:10.02s;">&nbsp;&nbsp;});</span></div>
+            <div class="hl-line"><span class="type-line" style="--chars:3; --steps:3; animation-duration:.08s; animation-delay:10.14s;">});</span><span class="type-cursor" style="animation-delay:10.22s, 10.22s;"></span></div>
+          </div>
+          <div class="hero-term" style="animation-delay:10.55s;">
+            <span style="color:var(--fg-faint)">$</span> npx playwright test<br>
+            <span class="term-pass">✓ 75 passed</span> <span style="color:var(--fg-faint)">(38.1s)</span>
+          </div>
         </div>
       </div>
     </div>
-
-    <div data-hero-fade class="container mt-14">
-      <div class="assert max-w-md">
-        <div class="assert-line">
-          <span class="k">const</span> candidate =
-          <span class="s">"Deepak"</span>;
-        </div>
-        <div class="assert-line">
-          expect(candidate.status).toBe(<span class="s">"OPEN_TO_QA_ROLES"</span>);
-        </div>
-        <div class="assert-result">1 passed — New Delhi, India</div>
       </div>
     </div>
   </header>
@@ -162,7 +179,7 @@
 
   <!-- TOOLKIT -->
   <section class="container py-10 md:py-16">
-    <p class="eyebrow reveal">Daily toolkit — real work</p>
+    <p class="eyebrow reveal">Daily toolkit — real work, not stock icons</p>
     <div class="grid md:grid-cols-2 gap-5 mt-8">
       <!-- Excel — real screenshot -->
       <div class="mock-window reveal">
@@ -170,7 +187,7 @@
           <div class="dots"><span></span><span></span><span></span></div>
           <span class="mock-title">Excel — Deepak_Thakur_QA_Internship_Assignment.xlsx</span>
         </div>
-        <img class="mock-shot" src="./assets/Screenshot 2026-08-16 182811.png"
+        <img class="mock-shot" src="assets/excel-ayuvya.png"
           alt="Real Excel test case sheet for the AYUVYA QA assignment, Functional Testing tab" />
         <div class="mock-caption">
           <b>Excel</b> — manual test case sheet for the AYUVYA QA assignment
@@ -184,7 +201,7 @@
           <div class="dots"><span></span><span></span><span></span></div>
           <span class="mock-title">MySQL 8.0 Command Line Client</span>
         </div>
-        <img class="mock-shot" src="./assets/Screenshot 2026-08-16 202818.png"
+        <img class="mock-shot" src="assets/sql-practice.png"
           alt="Real MySQL command line session — describing a table and inserting rows" style="object-position: top" />
         <div class="mock-caption">
           <b>SQL</b> — practicing schema design and inserts on the MySQL CLI
@@ -198,9 +215,33 @@
           <span class="active">login.spec.ts</span><span>playwright.config.ts</span>
         </div>
         <div class="code-body">
-          <img class="mock-shot" src="./assets/Screenshot 2026-08-16 203052.png"
-            alt="Real MySQL command line session — describing a table and inserting rows"
-            style="object-position: top" />
+          <div>
+            <span class="ln">1</span><span class="code-fn">test</span>(<span class="code-str">'user can login with valid
+              credentials'</span>, <span class="code-kw">async</span> ({ page }) => {
+          </div>
+          <div>
+            <span class="ln">2</span>&nbsp;&nbsp;<span class="code-kw">await</span>
+            page.goto(<span class="code-str">'/login'</span>);
+          </div>
+          <div>
+            <span class="ln">3</span>&nbsp;&nbsp;<span class="code-kw">await</span>
+            page.fill(<span class="code-str">'[data-testid="email"]'</span>,
+            <span class="code-str">'test@velor.app'</span>);
+          </div>
+          <div>
+            <span class="ln">4</span>&nbsp;&nbsp;<span class="code-kw">await</span>
+            page.fill(<span class="code-str">'[data-testid="password"]'</span>, <span
+              class="code-str">'••••••••'</span>);
+          </div>
+          <div>
+            <span class="ln">5</span>&nbsp;&nbsp;<span class="code-kw">await</span>
+            page.click(<span class="code-str">'[data-testid="login-btn"]'</span>);
+          </div>
+          <div>
+            <span class="ln">6</span>&nbsp;&nbsp;<span class="code-kw">await</span>
+            <span class="code-fn">expect</span>(page).toHaveURL(<span class="code-str">'/dashboard'</span>);
+          </div>
+          <div><span class="ln">7</span>});</div>
         </div>
         <div class="term-body">
           <span style="color: var(--fg-faint)">$</span> npx playwright test<br />
@@ -215,52 +256,77 @@
 
       <!-- Postman — dashboard mockup -->
       <div class="mock-window reveal">
-          <div class="mock-titlebar">
-            <div class="dots"><span></span><span></span><span></span></div>
-            <span class="mock-title">Postman — VELOR API</span>
-          </div>
-          <div class="pm-layout">
-            <div class="pm-sidebar">
-              <div class="pm-sidebar-title">VELOR API</div>
-              <div class="pm-req"><span class="pm-tag get">GET</span> /products</div>
-              <div class="pm-req active"><span class="pm-tag get">GET</span> /products/:id</div>
-              <div class="pm-req"><span class="pm-tag post">POST</span> /auth/login</div>
-              <div class="pm-req"><span class="pm-tag get">GET</span> /cart</div>
-              <div class="pm-req"><span class="pm-tag del">DEL</span> /cart/:id</div>
+        <div class="mock-titlebar">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <span class="mock-title">Postman — VELOR API</span>
+        </div>
+        <div class="pm-layout">
+          <div class="pm-sidebar">
+            <div class="pm-sidebar-title">VELOR API</div>
+            <div class="pm-req">
+              <span class="pm-tag get">GET</span> /products
             </div>
-            <div class="pm-main">
-              <div class="pm-toolbar">
-                <span class="pm-method">GET</span>
-                <span class="pm-url">https://api.velor.app/v1/products/101</span>
-                <span class="pm-send">Send</span>
-              </div>
-              <div class="pm-tabs">
-                <span class="active">Body</span><span>Headers</span><span>Tests</span><span style="margin-left: auto"><span class="pm-status">200 OK</span> · 142 ms</span>
-              </div>
-              <div class="pm-body pm-json">
-                <div><span class="ln">1</span>{</div>
-                <div><span class="ln">2</span>&nbsp;&nbsp;<span class="k">"id"</span>: <span class="n">101</span>,</div>
-                <div><span class="ln">3</span>&nbsp;&nbsp;<span class="k">"name"</span>: <span class="s">"Silk Wrap Dress"</span>,</div>
-                <div><span class="ln">4</span>&nbsp;&nbsp;<span class="k">"price"</span>: <span class="n">2499</span>,</div>
-                <div><span class="ln">5</span>&nbsp;&nbsp;<span class="k">"inStock"</span>: <span class="n">true</span></div>
-                <div><span class="ln">6</span>}</div>
-              </div>
-              <div class="pm-tests">
-                <div class="pm-tests-label">Test Results — 3/3 passed</div>
-                <div class="pm-test-row"><span class="term-pass">✓</span> Status code is 200</div>
-                <div class="pm-test-row"><span class="term-pass">✓</span> Response time is below 300ms</div>
-                <div class="pm-test-row"><span class="term-pass">✓</span> Response has "inStock" field</div>
-              </div>
+            <div class="pm-req active">
+              <span class="pm-tag get">GET</span> /products/:id
+            </div>
+            <div class="pm-req">
+              <span class="pm-tag post">POST</span> /auth/login
+            </div>
+            <div class="pm-req">
+              <span class="pm-tag get">GET</span> /cart
+            </div>
+            <div class="pm-req">
+              <span class="pm-tag del">DEL</span> /cart/:id
             </div>
           </div>
-          <div class="mock-caption">
-            <b>Postman</b> — request/response + test-script pattern used for API testing
-            (illustrative — real collection coming soon)
+          <div class="pm-main">
+            <div class="pm-toolbar">
+              <span class="pm-method">GET</span>
+              <span class="pm-url">https://api.velor.app/v1/products/101</span>
+              <span class="pm-send">Send</span>
+            </div>
+            <div class="pm-tabs">
+              <span class="active">Body</span><span>Headers</span><span>Tests</span><span
+                style="margin-left: auto"><span class="pm-status">200 OK</span> · 142 ms</span>
+            </div>
+            <div class="pm-body pm-json">
+              <div><span class="ln">1</span>{</div>
+              <div>
+                <span class="ln">2</span>&nbsp;&nbsp;<span class="k">"id"</span>: <span class="n">101</span>,
+              </div>
+              <div>
+                <span class="ln">3</span>&nbsp;&nbsp;<span class="k">"name"</span>: <span class="s">"Silk Wrap
+                  Dress"</span>,
+              </div>
+              <div>
+                <span class="ln">4</span>&nbsp;&nbsp;<span class="k">"price"</span>: <span class="n">2499</span>,
+              </div>
+              <div>
+                <span class="ln">5</span>&nbsp;&nbsp;<span class="k">"inStock"</span>: <span class="n">true</span>
+              </div>
+              <div><span class="ln">6</span>}</div>
+            </div>
+            <div class="pm-tests">
+              <div class="pm-tests-label">Test Results — 3/3 passed</div>
+              <div class="pm-test-row">
+                <span class="term-pass">✓</span> Status code is 200
+              </div>
+              <div class="pm-test-row">
+                <span class="term-pass">✓</span> Response time is below 300ms
+              </div>
+              <div class="pm-test-row">
+                <span class="term-pass">✓</span> Response has "inStock" field
+              </div>
+            </div>
           </div>
         </div>
- 
+        <div class="mock-caption">
+          <b>Postman</b> — request/response + test-script pattern used for API
+          testing (illustrative — real collection coming soon)
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
   <!-- FEATURED WORK -->
   <section class="container py-16 md:py-24">

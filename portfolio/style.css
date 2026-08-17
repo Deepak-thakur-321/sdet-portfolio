@@ -213,7 +213,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-family:var(--mono); font-size:.75rem; letter-spacing:.12em; text-transform:uppercase;
   color:var(--accent); display:flex; align-items:center; gap:.6rem;
 }
-.eyebrow::before{ content:""; width:22px; height:1px; background:var(--accent); }
+/* .eyebrow::before{ content:""; width:22px; height:1px; background:var(--accent); } */
 
 /* ---------- marquee ---------- */
 .marquee-track{
@@ -397,7 +397,7 @@ label.field-label{ font-family:var(--mono); font-size:.72rem; letter-spacing:.06
   background:#1c1d1f;
   font-family:var(--mono);
 }
-.mock-window .mock-shot{ width:100%; height:300px; object-fit:cover; object-position:top center; display:block; }
+.mock-window .mock-shot{ width:100%; height:230px; object-fit:cover; object-position:top center; display:block; }
 .mock-caption{ padding:.7rem .9rem; border-top:1px solid var(--line); font-size:.72rem; color:var(--fg-faint); }
 .mock-caption b{ color:var(--fg-dim); font-weight:500; }
 .mock-titlebar{
@@ -485,3 +485,55 @@ label.field-label{ font-family:var(--mono); font-size:.72rem; letter-spacing:.06
 .sql-table{ width:100%; border-collapse:collapse; font-size:.64rem; margin-top:.5rem; }
 .sql-table th{ text-align:left; color:var(--fg-faint); border-bottom:1px solid var(--line); padding:.35rem .5rem; }
 .sql-table td{ color:#d8d8d4; border-bottom:1px solid #232427; padding:.35rem .5rem; }
+
+/* ---------- hero: two-column layout + CSS-only typing code panel ----------
+   No JS dependency at all — pure CSS animation, so it can never break even
+   if every CDN fails. Monospace ch-units mean it scales cleanly on any
+   screen size automatically. */
+.hero-grid{ display:grid; gap:2.75rem; }
+@media (min-width:1024px){
+  .hero-grid{ grid-template-columns:1.1fr 1fr; align-items:center; gap:3rem; }
+}
+.hero-code-card{
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#050505;
+  overflow:hidden;
+  box-shadow:0 30px 60px -22px rgba(0,0,0,.65);
+  min-height: 470px;
+}
+.hero-code-body{
+  font-family:var(--mono); font-size:.82rem; line-height:1.95;
+  padding:1.15rem 1.25rem; overflow-x:auto;
+}
+.hero-code-body .hl-line{ white-space:nowrap; }
+.type-line{
+  display:inline-block; overflow:hidden; white-space:nowrap; width:0;
+  vertical-align:top; max-width:100%;
+  animation-name:typewriter; animation-timing-function:steps(var(--steps,40),end);
+  animation-fill-mode:forwards;
+}
+@keyframes typewriter{ from{ width:0; } to{ width:calc(var(--chars,40) * 1ch); } }
+.type-cursor{
+  display:inline-block; width:2px; height:1em; background:var(--accent);
+  margin-left:2px; vertical-align:text-bottom; opacity:0;
+  animation:caretIn .1s steps(1,end) forwards, caretBlink 1s steps(1,end) infinite;
+}
+@keyframes caretIn{ to{ opacity:1; } }
+@keyframes caretBlink{ 50%{ opacity:0; } }
+.hero-term{
+  border-top:1px solid var(--line); background:#0f1011;
+  font-family:var(--mono); font-size:.78rem; padding:.9rem 1.25rem;
+  opacity:0; animation:heroFadeUp .6s ease forwards;
+}
+@keyframes heroFadeUp{ from{ opacity:0; transform:translateY(6px); } to{ opacity:1; transform:translateY(0); } }
+
+@media (prefers-reduced-motion: reduce){
+  .type-line{ animation:none !important; width:calc(var(--chars,40) * 1ch) !important; }
+  .type-cursor{ animation:none !important; opacity:1 !important; }
+  .hero-term{ animation:none !important; opacity:1 !important; }
+}
+@media (max-width: 640px){
+  .hero-code-body{ font-size:.7rem; padding:.95rem .95rem; }
+  .hero-term{ font-size:.7rem; padding:.8rem .95rem; }
+}
