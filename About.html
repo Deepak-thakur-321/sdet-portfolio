@@ -1,351 +1,319 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About — Deepak</title>
-    <meta
-      name="description"
-      content="Deepak's story — from self-taught MERN developer to QA automation engineer."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: { bg: "#0a0a0a", accent: "#f5a623" },
-            fontFamily: {
-              display: ['"Space Grotesk"', "sans-serif"],
-              body: ['"Inter"', "sans-serif"],
-              mono: ['"JetBrains Mono"', "monospace"],
-            },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Deepak</title>
+  <meta name="description" content="Deepak's story — from self-taught MERN developer to QA automation engineer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { bg: "#0a0a0a", accent: "#f5a623" },
+          fontFamily: {
+            display: ['"Space Grotesk"', "sans-serif"],
+            body: ['"Inter"', "sans-serif"],
+            mono: ['"JetBrains Mono"', "monospace"],
           },
         },
-      };
-    </script>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
-  </head>
-  <body class="font-body">
-    <div class="grain"></div>
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring"></div>
-    <div id="transition-overlay"><span class="t-label">deepak.dev</span></div>
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+</head>
 
-    <nav class="site-nav">
-      <a href="index.html" class="nav-logo"
-        >DEEPAK<span class="dot">.</span
-        ><span style="color: var(--fg-faint)">&lt;qa/&gt;</span></a
-      >
-      <div class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="projects.html" class="nav-link">Work</a>
-        <a href="resume.html" class="nav-link">Resume</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+<body class="font-body">
+  <div class="grain"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div id="transition-overlay"><span class="t-label">deepak.dev</span></div>
+
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">DEEPAK<span class="dot">.</span><span
+        style="color: var(--fg-faint)">&lt;qa/&gt;</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Work</a>
+      <a href="resume.html" class="nav-link">Resume</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <div class="status-pill">
+      <span class="ping"></span>Open to QA / SDET roles
+    </div>
+    <div class="nav-burger"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-nav">
+    <a href="index.html"><span>01</span>Home</a>
+    <a href="about.html"><span>02</span>About</a>
+    <a href="projects.html"><span>03</span>Work</a>
+    <a href="resume.html"><span>04</span>Resume</a>
+    <a href="contact.html"><span>05</span>Contact</a>
+  </div>
+
+  <!-- HEADER -->
+  <header class="relative min-h-[75vh] flex items-center justify-center overflow-hidden">
+    <!-- Background image -->
+    <div class="absolute inset-0 bg-center bg-cover bg-no-repeat" style="
+      background-image: url('assets/qa-bg.jpg');
+      opacity: 0.10;
+      filter: grayscale(100%);
+    "></div>
+
+    <!-- Dark / theme overlay -->
+    <div class="absolute inset-0" style="
+      background:
+        radial-gradient(
+          circle at center,
+          transparent 0%,
+          var(--bg) 78%
+        );
+    "></div>
+
+    <!-- Content -->
+    <div class="container relative z-10 flex justify-center text-center px-6 pt-20">
+      <div class="reveal max-w-6xl">
+
+        <h1 class="font-display font-semibold mt-5 leading-[0.95]" style="
+          font-size: clamp(2.8rem, 7vw, 6rem);
+          letter-spacing: -0.04em;
+        ">
+          A <span style="color: var(--accent)">developer</span> who got curious
+          <span style="color: var(--accent)">about how things break.</span>
+        </h1>
+
+        <p class="mt-8 mx-auto max-w-3xl" style="
+          color: var(--fg-dim);
+          font-size: 1.08rem;
+          line-height: 1.8;
+        ">
+          I'm Deepak, a developer from New Delhi who started with frontend and
+          full-stack development before moving deeper into software quality.
+          My development background helps me understand how applications are
+          built; my QA work focuses on finding where they can fail.
+        </p>
+
+        <div class="mt-8 flex flex-wrap justify-center gap-4 mb-6">
+          <span class="proj-tag">Manual Testing</span>
+          <span class="proj-tag">Playwright</span>
+          <span class="proj-tag">API Testing</span>
+          <span class="proj-tag">SQL</span>
+          <span class="proj-tag">JavaScript</span>
+        </div>
+
       </div>
-      <div class="status-pill">
-        <span class="ping"></span>Open to QA / SDET roles
-      </div>
-      <div class="nav-burger"><span></span><span></span><span></span></div>
-    </nav>
-    <div class="mobile-nav">
-      <a href="index.html"><span>01</span>Home</a>
-      <a href="about.html"><span>02</span>About</a>
-      <a href="projects.html"><span>03</span>Work</a>
-      <a href="resume.html"><span>04</span>Resume</a>
-      <a href="contact.html"><span>05</span>Contact</a>
     </div>
 
-    <!-- HEADER -->
-    <header
-      class="container pt-40 pb-16 grid md:grid-cols-[1fr_1.2fr] gap-12 items-end"
-    >
-      <div class="reveal">
-        <div
-          class="rounded-2xl overflow-hidden border"
-          style="
-            border-color: var(--line);
-            aspect-ratio: 4/5;
-            background: linear-gradient(155deg, var(--bg-panel), var(--bg-alt));
-          "
-        >
-          <div
-            class="w-full h-full flex items-center justify-center font-display font-bold"
-            style="color: var(--fg-faint); font-size: 1rem"
-          >
-            <span class="assert" style="border: none; background: transparent">
-              <span class="assert-line">// portrait.jpg</span>
-              <span class="assert-line" style="color: var(--fg-faint)"
-                >drop your photo into /assets and swap the src</span
-              >
-            </span>
-          </div>
+    <!-- Bottom accent -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-px" style="background: var(--accent); opacity: 0.7">
+    </div>
+
+  </header>
+
+  <!-- JOURNEY -->
+  <section class="container py-16 md:py-24 border-t" style="border-color: var(--line)">
+    <p class="eyebrow reveal">The journey</p>
+
+    <h2 class="font-display font-bold mt-4 reveal" style="font-size: clamp(1.8rem, 4vw, 2.6rem)">
+      I learned to build. Then I learned to test what I build.
+    </h2>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-5">
+      <!-- 01 -->
+      <div class="assert reveal">
+        <div class="assert-line" style="color: var(--accent)">
+          2023 — 2025
         </div>
-      </div>
-      <div class="reveal">
-        <p class="eyebrow">About</p>
-        <h1
-          class="font-display font-extrabold mt-4 leading-[0.98]"
-          style="font-size: clamp(2.4rem, 6vw, 4.6rem)"
-        >
-          A developer who got curious about how things break.
-        </h1>
-        <p
-          class="mt-6 max-w-xl"
-          style="color: var(--fg-dim); font-size: 1.08rem; line-height: 1.7"
-        >
-          Deepak, based in New Delhi. Started in frontend and full-stack
-          development, shipped real product features, and then went looking for
-          the part of the job no one taught him — proving the thing actually
-          works before a user finds out it doesn't. That's QA now: manual and
-          automated, Playwright-first.
+
+        <p class="font-display font-semibold text-lg mt-2" style="color: var(--fg)">
+          I started by building software.
+        </p>
+
+        <p class="mt-3 text-sm" style="color: var(--fg-dim); line-height: 1.6">
+          I built my foundation through full-stack development, working with
+          JavaScript, React, Node.js, MongoDB and modern frontend tools. That
+          experience taught me how real applications are structured and
+          shipped.
         </p>
       </div>
-    </header>
 
-    <!-- JOURNEY -->
-    <section
-      class="container py-16 md:py-24 border-t"
-      style="border-color: var(--line)"
-    >
-      <p class="eyebrow reveal">The journey</p>
-      <h2
-        class="font-display font-bold mt-4 reveal"
-        style="font-size: clamp(1.8rem, 4vw, 2.6rem)"
-      >
-        Dev first. QA next. Both, now.
-      </h2>
+      <!-- 02 -->
+      <div class="assert reveal">
+        <div class="assert-line" style="color: var(--accent)">
+          2025 — 2026
+        </div>
 
-      <div class="mt-12 grid md:grid-cols-3 gap-5">
-        <div class="assert reveal">
-          <div class="assert-line" style="color: var(--accent)">
-            2023 — 2025
-          </div>
-          <p
-            class="font-display font-semibold text-lg mt-2"
-            style="color: var(--fg)"
-          >
-            I started as a builder.
-          </p>
-          <p
-            class="mt-3 text-sm"
-            style="color: var(--fg-dim); line-height: 1.6"
-          >
-            Self-taught MERN, then Angular/PrimeNG on the job at Chipin Corp — a
-            Gaming Zone site, a Job Application Tracker, Purchase Order
-            components.
-          </p>
-        </div>
-        <div class="assert reveal">
-          <div class="assert-line" style="color: var(--accent)">Late 2025</div>
-          <p
-            class="font-display font-semibold text-lg mt-2"
-            style="color: var(--fg)"
-          >
-            Then I started breaking things on purpose.
-          </p>
-          <p
-            class="mt-3 text-sm"
-            style="color: var(--fg-dim); line-height: 1.6"
-          >
-            Manual test cases in Excel first — Login, Registration — before
-            trusting myself with automation. Then Playwright: Page Object Model,
-            20+ E2E tests, GitHub Actions CI.
-          </p>
-        </div>
-        <div class="assert reveal">
-          <div class="assert-line" style="color: var(--accent)">Now</div>
-          <p
-            class="font-display font-semibold text-lg mt-2"
-            style="color: var(--fg)"
-          >
-            I do both — that's the edge.
-          </p>
-          <p
-            class="mt-3 text-sm"
-            style="color: var(--fg-dim); line-height: 1.6"
-          >
-            A QA engineer who reads the codebase, not just the UI. Currently
-            sharpening SQL and API testing with Postman.
-          </p>
-        </div>
+        <p class="font-display font-semibold text-lg mt-2" style="color: var(--fg)">
+          Then I moved deeper into quality.
+        </p>
+
+        <p class="mt-3 text-sm" style="color: var(--fg-dim); line-height: 1.6">
+          I started with manual testing — test scenarios, functional testing,
+          negative testing, regression, bug reporting and Excel-based test
+          documentation. I then moved into Playwright and built 75+ automated
+          E2E tests using JavaScript and Page Object Model.
+        </p>
       </div>
-    </section>
 
-    <!-- EDUCATION TIMELINE -->
-    <section class="container py-20 md:py-28">
-      <p class="eyebrow reveal">Education</p>
-      <h2
-        class="font-display font-bold mt-4 reveal"
-        style="font-size: clamp(1.8rem, 4vw, 2.6rem)"
-      >
-        Mostly self-directed, on record where it counts.
-      </h2>
+      <!-- 03 -->
+      <div class="assert reveal">
+        <div class="assert-line" style="color: var(--accent)">Now</div>
 
-      <div class="mt-14 max-w-2xl">
-        <div class="tl-item reveal">
-          <p class="font-display font-semibold text-lg">
-            BA — Indira Gandhi National Open University (IGNOU)
-          </p>
-          <p style="color: var(--fg-faint)" class="text-sm mt-1">
-            Formal degree
-          </p>
-        </div>
-        <div class="tl-item reveal">
-          <p class="font-display font-semibold text-lg">
-            Full Stack Development — MERN
-          </p>
-          <p style="color: var(--fg-dim)" class="text-sm mt-1">
-            Self-taught: React, Node.js, Express.js, MongoDB
-          </p>
-        </div>
-        <div class="tl-item reveal">
-          <p class="font-display font-semibold text-lg">
-            QA Automation — Playwright
-          </p>
-          <p style="color: var(--fg-dim)" class="text-sm mt-1">
-            Self-taught: manual testing fundamentals through to E2E automation
-            and CI integration
-          </p>
-        </div>
+        <p class="font-display font-semibold text-lg mt-2" style="color: var(--fg)">
+          Building with a tester's mindset.
+        </p>
+
+        <p class="mt-3 text-sm" style="color: var(--fg-dim); line-height: 1.6">
+          I'm combining my development background with QA skills across manual
+          testing, Playwright automation, API testing with Postman and SQL.
+          The goal is simple: understand the product, find what can go wrong,
+          and verify it properly.
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- VALUES -->
-    <section
-      class="container py-16 md:py-24 border-t"
-      style="border-color: var(--line)"
-    >
-      <p class="eyebrow reveal">What I bring</p>
-      <div class="grid md:grid-cols-3 gap-6 mt-10">
-        <div class="assert reveal">
-          <div class="assert-line">value(<span class="s">'context'</span>)</div>
-          <p
-            class="mt-3 text-sm"
-            style="color: var(--fg-dim); line-height: 1.6"
-          >
-            I've written the code that ships. I know where bugs like to hide
-            because I've put them there myself.
-          </p>
-        </div>
-        <div class="assert reveal">
-          <div class="assert-line">
-            value(<span class="s">'discipline'</span>)
-          </div>
-          <p
-            class="mt-3 text-sm"
-            style="color: var(--fg-dim); line-height: 1.6"
-          >
-            Manual test case design first, automation second. I don't automate
-            what I haven't understood.
-          </p>
-        </div>
-        <div class="assert reveal">
-          <div class="assert-line">value(<span class="s">'honesty'</span>)</div>
-          <p
-            class="mt-3 text-sm"
-            style="color: var(--fg-dim); line-height: 1.6"
-          >
-            My resume reflects work I've actually finished. No inflated claims —
-            the projects speak for themselves.
-          </p>
-        </div>
-      </div>
-    </section>
+  <!-- EDUCATION TIMELINE -->
+  <section class="container py-16 md:py-24">
+    <p class="eyebrow reveal">Education</p>
 
-    <!-- FUTURE PLANS -->
-    <section
-      class="container py-16 md:py-28 border-t"
-      style="border-color: var(--line)"
-    >
-      <div class="grid md:grid-cols-2 gap-12">
-        <div class="reveal">
-          <p class="eyebrow">Where this goes</p>
-          <h2
-            class="font-display font-bold mt-4"
-            style="font-size: clamp(1.8rem, 4vw, 2.6rem)"
-          >
-            Confident about the direction, honest about the timeline.
-          </h2>
-        </div>
-        <div
-          class="reveal space-y-6"
-          style="color: var(--fg-dim); font-size: 1.02rem; line-height: 1.7"
-        >
-          <p>
-            <span style="color: var(--fg)" class="font-medium">Right now:</span>
-            land a QA Engineer / SDET role and go deep — sharpen SQL, API
-            testing, and the interview execution that matches the skills I
-            already have.
-          </p>
-          <p>
-            <span style="color: var(--fg)" class="font-medium"
-              >Medium-term:</span
-            >
-            a few solid years in QA, then further study aimed at Business
-            Analysis — using the tester's habit of asking "what actually happens
-            here" on the product side.
-          </p>
-          <p>
-            <span style="color: var(--fg)" class="font-medium"
-              >Longer-term:</span
-            >
-            content around the developer-to-QA journey, and an eye on Product
-            Management — where building, testing, and deciding what to build
-            next all meet.
-          </p>
-        </div>
-      </div>
-    </section>
+    <h2 class="font-display font-bold mt-4 reveal" style="font-size: clamp(1.8rem, 4vw, 2.6rem)">
+      Mostly self-directed, on record where it counts.
+    </h2>
 
-    <footer class="site-footer">
-      <div
-        class="container flex flex-col md:flex-row md:items-center justify-between gap-6"
-      >
-        <div>
-          <p class="font-display font-bold text-xl">Deepak</p>
-          <p style="color: var(--fg-faint)" class="text-sm mt-1">
-            New Delhi, India — open to QA Engineer / SDET roles
-          </p>
-        </div>
-        <div class="footer-links flex flex-wrap gap-x-6 gap-y-2">
-          <a
-            href="https://www.linkedin.com/in/deepakthakur22"
-            target="_blank"
-            rel="noopener"
-            >LinkedIn</a
-          >
-          <a
-            href="https://github.com/Deepak-thakur-321"
-            target="_blank"
-            rel="noopener"
-            >GitHub</a
-          >
-          <a href="mailto:deepakthakur.codr@gmail.com">Email</a>
-          <a href="resume.html">Resume</a>
-        </div>
+    <div class="mt-12 max-w-2xl">
+
+      <div class="tl-item reveal">
+        <p class="font-display font-semibold text-lg">
+          Full Stack Development — MERN
+        </p>
+
+        <p style="color: var(--fg-dim)" class="text-sm mt-1">
+          Sheryians Coding School: React, Node.js, Express.js, MongoDB
+        </p>
       </div>
-      <div
-        class="container mt-10 pt-6"
-        style="
+
+      <div class="tl-item reveal">
+        <p class="font-display font-semibold text-lg">
+          QA Automation — Playwright
+        </p>
+
+        <p style="color: var(--fg-dim)" class="text-sm mt-1">
+          Self-taught: manual testing fundamentals through to E2E automation,
+          API testing, SQL and CI integration
+        </p>
+      </div>
+
+      <div class="tl-item reveal">
+        <p class="font-display font-semibold text-lg">
+          Bachelor of Arts — IGNOU
+        </p>
+
+        <p style="color: var(--fg-faint)" class="text-sm mt-1">
+          Indira Gandhi National Open University · 2024
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="container py-16 md:py-24 border-t" style="border-color: var(--line)">
+    <p class="eyebrow reveal">What I bring</p>
+    <div class="grid md:grid-cols-3 gap-6 mt-10">
+      <div class="assert reveal">
+        <div class="assert-line">value(<span class="s">'context'</span>)</div>
+        <p class="mt-3 text-sm" style="color: var(--fg-dim); line-height: 1.6">
+          I've written the code that ships. I know where bugs like to hide
+          because I've put them there myself.
+        </p>
+      </div>
+      <div class="assert reveal">
+        <div class="assert-line">
+          value(<span class="s">'discipline'</span>)
+        </div>
+        <p class="mt-3 text-sm" style="color: var(--fg-dim); line-height: 1.6">
+          Manual test case design first, automation second. I don't automate
+          what I haven't understood.
+        </p>
+      </div>
+      <div class="assert reveal">
+        <div class="assert-line">value(<span class="s">'honesty'</span>)</div>
+        <p class="mt-3 text-sm" style="color: var(--fg-dim); line-height: 1.6">
+          My resume reflects work I've actually finished. No inflated claims —
+          the projects speak for themselves.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUTURE PLANS -->
+  <section class="container py-16 md:py-28 border-t" style="border-color: var(--line)">
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="reveal">
+        <p class="eyebrow">Where this goes</p>
+        <h2 class="font-display font-bold mt-4" style="font-size: clamp(1.8rem, 4vw, 2.6rem)">
+          Confident about the direction, honest about the timeline.
+        </h2>
+      </div>
+      <div class="reveal space-y-6" style="color: var(--fg-dim); font-size: 1.02rem; line-height: 1.7">
+        <p>
+          <span style="color: var(--fg)" class="font-medium">Right now:</span>
+          land a QA Engineer / SDET role and go deep — sharpen SQL, API
+          testing, and the interview execution that matches the skills I
+          already have.
+        </p>
+        <p>
+          <span style="color: var(--fg)" class="font-medium">Medium-term:</span>
+          a few solid years in QA, then further study aimed at Business
+          Analysis — using the tester's habit of asking "what actually happens
+          here" on the product side.
+        </p>
+        <p>
+          <span style="color: var(--fg)" class="font-medium">Longer-term:</span>
+          content around the developer-to-QA journey, and an eye on Product
+          Management — where building, testing, and deciding what to build
+          next all meet.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div>
+        <p class="font-display font-bold text-xl">Deepak</p>
+        <p style="color: var(--fg-faint)" class="text-sm mt-1">
+          New Delhi, India — open to QA Engineer / SDET roles
+        </p>
+      </div>
+      <div class="footer-links flex flex-wrap gap-x-6 gap-y-2">
+        <a href="https://www.linkedin.com/in/deepakthakur22" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Deepak-thakur-321" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:deepakthakur.codr@gmail.com">Email</a>
+        <a href="resume.html">Resume</a>
+      </div>
+    </div>
+    <div class="container mt-10 pt-6" style="
           border-top: 1px solid var(--line-soft);
           color: var(--fg-faint);
           font-family: var(--mono);
           font-size: 0.72rem;
-        "
-      >
-        © 2026 Deepak. Built by hand, tested on purpose.
-      </div>
-    </footer>
+        ">
+      © 2026 Deepak. Built by hand, tested on purpose.
+    </div>
+  </footer>
 
-    <script src="shared.js"></script>
-  </body>
+  <script src="shared.js"></script>
+</body>
+
 </html>
