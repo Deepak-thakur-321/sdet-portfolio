@@ -218,7 +218,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* ---------- marquee ---------- */
 .marquee-track{
   display:flex; width:max-content;
-  animation:marquee 34s linear infinite;
+  animation:marquee 24s linear infinite;
 }
 .marquee-track span{
   font-family:var(--display); font-weight:600; font-size:clamp(1.6rem,4vw,2.6rem);
@@ -397,7 +397,7 @@ label.field-label{ font-family:var(--mono); font-size:.72rem; letter-spacing:.06
   background:#1c1d1f;
   font-family:var(--mono);
 }
-.mock-window .mock-shot{ width:100%; height:230px; object-fit:cover; object-position:top center; display:block; }
+.mock-window .mock-shot{ width:100%; height:300px; object-fit:cover; object-position:top center; display:block; }
 .mock-caption{ padding:.7rem .9rem; border-top:1px solid var(--line); font-size:.72rem; color:var(--fg-faint); }
 .mock-caption b{ color:var(--fg-dim); font-weight:500; }
 .mock-titlebar{

@@ -94,22 +94,49 @@
         </div>
 
         <!-- live "typing" code panel — pure CSS, no JS dependency -->
-         <div class="hero-code-card reveal">
+        <div class="hero-code-card reveal">
           <div class="mock-titlebar">
             <div class="dots"><span></span><span></span><span></span></div>
             <span class="mock-title">login.spec.ts — Playwright</span>
           </div>
           <div class="hero-code-body">
-            <div class="hl-line"><span class="type-line" style="--chars:40; --steps:40; animation-duration:.88s; animation-delay:.3s;"><span class="code-fn">test.describe</span>(<span class="code-str">'Authentication'</span>, () => {</span></div>
-            <div class="hl-line"><span class="type-line" style="--chars:72; --steps:72; animation-duration:1.58s; animation-delay:1.18s;">&nbsp;&nbsp;<span class="code-fn">test</span>(<span class="code-str">'user can login with valid credentials'</span>, <span class="code-kw">async</span> ({ page }) => {</span></div>
-            <div class="hl-line"><span class="type-line" style="--chars:31; --steps:31; animation-duration:.68s; animation-delay:2.76s;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-kw">await</span> page.goto(<span class="code-str">'/login'</span>);</span></div>
-            <div class="hl-line"><span class="type-line" style="--chars:65; --steps:65; animation-duration:1.43s; animation-delay:3.44s;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-kw">await</span> page.fill(<span class="code-str">'[data-testid="email"]'</span>, <span class="code-str">'test@velor.app'</span>);</span></div>
-            <div class="hl-line"><span class="type-line" style="--chars:61; --steps:61; animation-duration:1.34s; animation-delay:4.87s;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-kw">await</span> page.fill(<span class="code-str">'[data-testid="password"]'</span>, <span class="code-str">'••••••••'</span>);</span></div>
-            <div class="hl-line"><span class="type-line" style="--chars:51; --steps:51; animation-duration:1.12s; animation-delay:6.21s;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-kw">await</span> page.click(<span class="code-str">'[data-testid="login-btn"]'</span>);</span></div>
-            <div class="hl-line"><span class="type-line" style="--chars:48; --steps:48; animation-duration:1.06s; animation-delay:7.33s;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-kw">await</span> <span class="code-fn">expect</span>(page).toHaveURL(<span class="code-str">'/dashboard'</span>);</span></div>
-            <div class="hl-line"><span class="type-line" style="--chars:74; --steps:74; animation-duration:1.63s; animation-delay:8.39s;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-kw">await</span> <span class="code-fn">expect</span>(page.locator(<span class="code-str">'[data-testid="welcome"]'</span>)).toBeVisible();</span></div>
-            <div class="hl-line"><span class="type-line" style="--chars:5; --steps:5; animation-duration:.12s; animation-delay:10.02s;">&nbsp;&nbsp;});</span></div>
-            <div class="hl-line"><span class="type-line" style="--chars:3; --steps:3; animation-duration:.08s; animation-delay:10.14s;">});</span><span class="type-cursor" style="animation-delay:10.22s, 10.22s;"></span></div>
+            <div class="hl-line"><span class="type-line"
+                style="--chars:40; --steps:40; animation-duration:.88s; animation-delay:.3s;"><span
+                  class="code-fn">test.describe</span>(<span class="code-str">'Authentication'</span>, () => {</span>
+            </div>
+            <div class="hl-line"><span class="type-line"
+                style="--chars:72; --steps:72; animation-duration:1.58s; animation-delay:1.18s;">&nbsp;&nbsp;<span
+                  class="code-fn">test</span>(<span class="code-str">'user can login with valid credentials'</span>,
+                <span class="code-kw">async</span> ({ page }) => {</span></div>
+            <div class="hl-line"><span class="type-line"
+                style="--chars:31; --steps:31; animation-duration:.68s; animation-delay:2.76s;">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  class="code-kw">await</span> page.goto(<span class="code-str">'/login'</span>);</span></div>
+            <div class="hl-line"><span class="type-line"
+                style="--chars:65; --steps:65; animation-duration:1.43s; animation-delay:3.44s;">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  class="code-kw">await</span> page.fill(<span class="code-str">'[data-testid="email"]'</span>, <span
+                  class="code-str">'test@velor.app'</span>);</span></div>
+            <div class="hl-line"><span class="type-line"
+                style="--chars:61; --steps:61; animation-duration:1.34s; animation-delay:4.87s;">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  class="code-kw">await</span> page.fill(<span class="code-str">'[data-testid="password"]'</span>, <span
+                  class="code-str">'••••••••'</span>);</span></div>
+            <div class="hl-line"><span class="type-line"
+                style="--chars:51; --steps:51; animation-duration:1.12s; animation-delay:6.21s;">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  class="code-kw">await</span> page.click(<span
+                  class="code-str">'[data-testid="login-btn"]'</span>);</span></div>
+            <div class="hl-line"><span class="type-line"
+                style="--chars:48; --steps:48; animation-duration:1.06s; animation-delay:7.33s;">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  class="code-kw">await</span> <span class="code-fn">expect</span>(page).toHaveURL(<span
+                  class="code-str">'/dashboard'</span>);</span></div>
+            <div class="hl-line"><span class="type-line"
+                style="--chars:74; --steps:74; animation-duration:1.63s; animation-delay:8.39s;">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  class="code-kw">await</span> <span class="code-fn">expect</span>(page.locator(<span
+                  class="code-str">'[data-testid="welcome"]'</span>)).toBeVisible();</span></div>
+            <div class="hl-line"><span class="type-line"
+                style="--chars:5; --steps:5; animation-duration:.12s; animation-delay:10.02s;">&nbsp;&nbsp;});</span>
+            </div>
+            <div class="hl-line"><span class="type-line"
+                style="--chars:3; --steps:3; animation-duration:.08s; animation-delay:10.14s;">});</span><span
+                class="type-cursor" style="animation-delay:10.22s, 10.22s;"></span></div>
           </div>
           <div class="hero-term" style="animation-delay:10.55s;">
             <span style="color:var(--fg-faint)">$</span> npx playwright test<br>
@@ -118,7 +145,7 @@
         </div>
       </div>
     </div>
-      </div>
+    </div>
     </div>
   </header>
 
@@ -187,7 +214,7 @@
           <div class="dots"><span></span><span></span><span></span></div>
           <span class="mock-title">Excel — Deepak_Thakur_QA_Internship_Assignment.xlsx</span>
         </div>
-        <img class="mock-shot" src="assets/excel-ayuvya.png"
+        <img class="mock-shot" src="assets/Screenshot 2026-08-16 182811.png"
           alt="Real Excel test case sheet for the AYUVYA QA assignment, Functional Testing tab" />
         <div class="mock-caption">
           <b>Excel</b> — manual test case sheet for the AYUVYA QA assignment
@@ -201,7 +228,7 @@
           <div class="dots"><span></span><span></span><span></span></div>
           <span class="mock-title">MySQL 8.0 Command Line Client</span>
         </div>
-        <img class="mock-shot" src="assets/sql-practice.png"
+        <img class="mock-shot" src="assets/Screenshot 2026-08-16 202818.png"
           alt="Real MySQL command line session — describing a table and inserting rows" style="object-position: top" />
         <div class="mock-caption">
           <b>SQL</b> — practicing schema design and inserts on the MySQL CLI
@@ -215,33 +242,10 @@
           <span class="active">login.spec.ts</span><span>playwright.config.ts</span>
         </div>
         <div class="code-body">
-          <div>
-            <span class="ln">1</span><span class="code-fn">test</span>(<span class="code-str">'user can login with valid
-              credentials'</span>, <span class="code-kw">async</span> ({ page }) => {
-          </div>
-          <div>
-            <span class="ln">2</span>&nbsp;&nbsp;<span class="code-kw">await</span>
-            page.goto(<span class="code-str">'/login'</span>);
-          </div>
-          <div>
-            <span class="ln">3</span>&nbsp;&nbsp;<span class="code-kw">await</span>
-            page.fill(<span class="code-str">'[data-testid="email"]'</span>,
-            <span class="code-str">'test@velor.app'</span>);
-          </div>
-          <div>
-            <span class="ln">4</span>&nbsp;&nbsp;<span class="code-kw">await</span>
-            page.fill(<span class="code-str">'[data-testid="password"]'</span>, <span
-              class="code-str">'••••••••'</span>);
-          </div>
-          <div>
-            <span class="ln">5</span>&nbsp;&nbsp;<span class="code-kw">await</span>
-            page.click(<span class="code-str">'[data-testid="login-btn"]'</span>);
-          </div>
-          <div>
-            <span class="ln">6</span>&nbsp;&nbsp;<span class="code-kw">await</span>
-            <span class="code-fn">expect</span>(page).toHaveURL(<span class="code-str">'/dashboard'</span>);
-          </div>
-          <div><span class="ln">7</span>});</div>
+          <img class="mock-shot" src="assets/Screenshot 2026-08-16 203052.png"
+            alt="Real MySQL command line session — describing a table and inserting rows"
+            style="object-position: top" />
+
         </div>
         <div class="term-body">
           <span style="color: var(--fg-faint)">$</span> npx playwright test<br />
@@ -329,7 +333,7 @@
   </section>
 
   <!-- FEATURED WORK -->
-  <section class="container py-16 md:py-24">
+  <section class="container py-16 md:py-16">
     <div class="flex items-end justify-between flex-wrap gap-4 reveal">
       <h2 class="font-display font-bold" style="font-size: clamp(1.8rem, 4vw, 3rem)">
         Selected work
@@ -368,7 +372,7 @@
   </section>
 
   <!-- ABOUT TEASER -->
-  <section class="container py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+  <section class="container py-1 md:pb-24 md:mt-10 grid md:grid-cols-2 gap-10 items-center">
     <div class="reveal">
       <p class="eyebrow">The short version</p>
       <h2 class="font-display font-bold mt-4" style="font-size: clamp(1.8rem, 4vw, 2.8rem)">
@@ -393,18 +397,20 @@
 
   <!-- SKILLS MARQUEE -->
   <section class="py-14 border-t border-b overflow-hidden" style="border-color: var(--line)">
-    <div class="marquee-track">
-      <span class="on">React <em>·</em></span><span class="on">Node.js <em>·</em></span><span class="on">Playwright
-        <em>·</em></span>
-      <span class="on">MongoDB <em>·</em></span><span class="on">Manual Testing <em>·</em></span><span
-        class="on">Express.js <em>·</em></span>
-      <span class="on">Postman <em>·</em></span><span class="on">React <em>·</em></span><span class="on">Node.js
-        <em>·</em></span>
-      <span class="on">Playwright <em>·</em></span><span class="on">MongoDB <em>·</em></span><span class="on">Manual
-        Testing <em>·</em></span>
-      <span class="on">Express.js <em>·</em></span><span class="on">Postman <em>·</em></span>
-    </div>
-  </section>
+  <div class="marquee-track">
+    <span class="on">React <em>·</em></span>
+    <span class="on">JavaScript <em>·</em></span>
+    <span class="on">Manual Testing <em>·</em></span>
+    <span class="on">Functional Testing <em>·</em></span>
+    <span class="on">API Testing <em>·</em></span>
+    <span class="on">Playwright <em>·</em></span>
+    <span class="on">Postman <em>·</em></span>
+    <span class="on">SQL <em>·</em></span>
+    <span class="on">Regression Testing <em>·</em></span>
+    <span class="on">Smoke Testing <em>·</em></span>
+    <span class="on">Node.js <em>·</em></span>
+  </div>
+</section>
 
   <!-- CTA BANNER -->
   <section class="container py-24 md:py-36 text-center relative reveal">
