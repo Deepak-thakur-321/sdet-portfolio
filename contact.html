@@ -45,12 +45,12 @@
         ><span style="color: var(--fg-faint)">&lt;qa/&gt;</span></a
       >
       <div class="nav-links">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="projects.html" class="nav-link">Work</a>
-      <a href="resume.html" class="nav-link">Resume</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </div>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Work</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
       <div class="status-pill">
         <span class="ping"></span>Open to QA / SDET roles
       </div>
@@ -76,7 +76,18 @@
 
     <section class="container pb-24 grid md:grid-cols-[1.1fr_0.9fr] gap-14">
       <!-- FORM -->
-      <form id="contact-form" class="reveal space-y-7">
+      <!-- FORM -->
+      <form id="contact-form" class="reveal space-y-7" novalidate>
+        <input type="hidden" name="access_key" value="YAHAN_APNI_ACCESS_KEY" />
+        <input type="hidden" name="from_name" value="Portfolio Contact Form" />
+        <!-- spam trap: bots bharte hain, insaan nahi dekhta -->
+        <input
+          type="checkbox"
+          name="botcheck"
+          class="hidden"
+          style="display: none"
+        />
+
         <div>
           <label class="field-label" for="name">Your name</label>
           <input
@@ -120,13 +131,16 @@
             required
           ></textarea>
         </div>
-        <button type="submit" class="btn btn-fill magnetic">
-          Send message <span class="btn-arrow">→</span>
+        <button type="submit" id="submit-btn" class="btn btn-fill magnetic">
+          <span id="btn-label">Send message</span>
+          <span class="btn-arrow">→</span>
         </button>
-        <p class="text-xs" style="color: var(--fg-faint)">
-          Opens your email client with this message pre-filled, addressed to
-          deepakthakur.codr@gmail.com.
-        </p>
+        <p
+          id="form-status"
+          class="text-sm"
+          role="status"
+          aria-live="polite"
+        ></p>
       </form>
 
       <!-- SIDE INFO -->
@@ -187,7 +201,7 @@
         </div>
 
         <a
-          href="assets/Deepak-Resume.pdf"
+          href="assets/Deepak_QA_Automation_Resume.pdf"
           download
           class="btn btn-outline magnetic w-full justify-center"
           >Download resume <span class="btn-arrow">↓</span></a
@@ -236,19 +250,5 @@
     </footer>
 
     <script src="shared.js"></script>
-    <script>
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-          const subject =
-            document.getElementById("subject").value || "Portfolio contact";
-          const message = document.getElementById("message").value;
-          const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-          window.location.href = `mailto:deepakthakur.codr@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        });
-    </script>
   </body>
 </html>
